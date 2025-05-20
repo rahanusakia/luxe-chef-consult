@@ -39,7 +39,7 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="bg-chef-darker border-gold-dark/30 hover:border-gold-DEFAULT transition-all duration-300">
+            <Card key={index} className="bg-chef-darker border-gold-dark/30 hover:border-gold-DEFAULT transition-all duration-300 transform hover:translate-y-[-5px]">
               <CardHeader className="pb-2">
                 <div className="mb-4">{service.icon}</div>
                 <CardTitle className="text-gold-light text-xl">{service.title}</CardTitle>
@@ -51,7 +51,7 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 p-8 md:p-12 bg-gradient-to-r from-chef-darker to-chef-dark border border-gold-dark/30 rounded-lg">
+        <div className="mt-16 p-8 md:p-12 bg-gradient-to-r from-chef-darker to-chef-dark border border-gold-dark/30 rounded-lg shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-semibold text-gold-light mb-4">Tailored Solutions for Culinary Excellence</h3>
@@ -74,14 +74,11 @@ const Services = () => {
                 ))}
               </ul>
             </div>
-            <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+            <div className="rounded-lg overflow-hidden shadow-2xl shadow-gold-dark/20 transform hover:scale-[1.02] transition-all duration-500">
               <img 
                 src="/chef-service.jpg" 
-                alt="Chef providing consultation service" 
+                alt="Chef preparing gourmet meal in professional kitchen" 
                 className="object-cover w-full h-full"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://source.unsplash.com/W3SEyZODn8U';
-                }}
               />
             </div>
           </div>
