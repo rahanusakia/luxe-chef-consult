@@ -4,8 +4,9 @@ import { ChefHat } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed bg-hero-pattern" id="home">
-      <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/80 to-chef-darker/70"></div>
+    <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed" 
+         style={{ backgroundImage: 'url("/hero-bg.jpg")' }} id="home">
+      <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/90 to-chef-darker/80"></div>
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="flex justify-center items-center mb-6">
           <div className="h-16 w-16 rounded-full bg-gold-dark/30 flex items-center justify-center">
