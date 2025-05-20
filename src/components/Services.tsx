@@ -76,7 +76,7 @@ const Services = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-2xl shadow-gold-dark/20 transform hover:scale-[1.02] transition-all duration-500">
               <img 
-                src="/chef-service.jpg" 
+                src="/lovable-uploads/b756b57d-9265-4f42-8c36-eb308c72a6d1.png" 
                 alt="Chef preparing gourmet meal in professional kitchen" 
                 className="object-cover w-full h-full"
               />
