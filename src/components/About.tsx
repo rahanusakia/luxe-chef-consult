@@ -1,5 +1,6 @@
 
 import { Award, Star, Crown } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const About = () => {
   return (
@@ -30,10 +31,25 @@ const About = () => {
           <div>
             <h3 className="text-2xl font-semibold text-chef-dark mb-6">Culinary Excellence & Business Success</h3>
             <p className="mb-6 text-chef-dark/80">
-              Founded by Master Chef Michel Laurent with over 25 years of experience in 
+              Founded by Master Chef David Cailleba with over 30 years of experience in 
               Michelin-starred restaurants across Europe and Asia, LuxeChef Consultancy bridges the 
               gap between culinary artistry and business profitability.
             </p>
+            
+            <div className="flex items-center gap-6 mb-8">
+              <Avatar className="h-24 w-24 border-2 border-gold-DEFAULT shadow-lg">
+                <AvatarImage src="/lovable-uploads/c255526a-7499-4a0c-afe6-5728e9df1691.png" alt="Master Chef David Cailleba" />
+                <AvatarFallback className="bg-gold-light text-chef-dark text-xl">DC</AvatarFallback>
+              </Avatar>
+              <div>
+                <h4 className="text-xl font-playfair text-chef-dark font-semibold">Master Chef David Cailleba</h4>
+                <p className="text-gold-dark italic">Founder & Executive Consultant</p>
+                <p className="text-chef-dark/80 mt-2">
+                  "My passion is transforming culinary operations into extraordinary gastronomic experiences."
+                </p>
+              </div>
+            </div>
+
             <p className="mb-8 text-chef-dark/80">
               Our consultants have led operations in prestigious establishments worldwide, 
               understanding the unique challenges of the fine dining industry and providing 
