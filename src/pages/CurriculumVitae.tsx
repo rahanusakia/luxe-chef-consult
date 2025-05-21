@@ -1,11 +1,37 @@
-
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ChefHat, Calendar, Award, School, Briefcase, Phone, Mail, MapPin, Link } from "lucide-react";
+import { ChefHat, Calendar, Award, School, Briefcase, Phone, Mail, MapPin, Link, ClipboardList } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const CurriculumVitae = () => {
+  const [activeCategory, setActiveCategory] = useState<string>("kitchen");
+  
+  const dutyCategories = {
+    kitchen: [
+      "Responsible for the operational management of the kitchen.",
+      "Making sure that all health and safety requirements are met.",
+      "In charge of the cooking, preparation and serving of meals and refreshments.",
+      "Keeping the kitchen organized, ensuring utensils are placed in the correct place.",
+      "Ensuring the kitchen is a safe environment to work in.",
+      "Advising new cooking techniques and equipment to kitchen staff.",
+      "Carry out the preparatory work for creating dishes.",
+      "Cooking, breakfast, lunch and evening meals"
+    ],
+    food: [
+      "Checking food items on delivery and tidy them into cold storage.",
+      "Prepare and present dishes so they are ready for guests at the right time.",
+      "Ensure all the food produced is of the very highest standard and delicious.",
+      "Serving classic French food and modern European cuisine.",
+      "Responsible for food stock control, ordering high quality vegetables and meat.",
+      "Preparing food for both public visitors and private event guests i.e. weddings etc.",
+      "Introducing & developing new dishes & measuring consistency and performance.",
+      "Meal preparation and menu planning.",
+      "Ensuring the kitchen is maintained and cleaned to the highest level."
+    ]
+  };
+
   return (
     <div className="bg-chef-dark min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-6">
@@ -231,6 +257,46 @@ const CurriculumVitae = () => {
                   </div>
                 </div>
               </ScrollArea>
+            </div>
+            
+            {/* Duties & Responsibilities Section - NEW SECTION */}
+            <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
+              <div className="flex items-center mb-6">
+                <ClipboardList className="h-6 w-6 text-gold-light mr-3" />
+                <h2 className="text-2xl font-bold text-white">Duties & Responsibilities</h2>
+              </div>
+              
+              <div className="flex gap-4 mb-6">
+                <Button 
+                  variant={activeCategory === "kitchen" ? "default" : "outline"}
+                  onClick={() => setActiveCategory("kitchen")}
+                  className={`${activeCategory === "kitchen" ? "bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark" : "bg-transparent text-gold-light border-gold-light/30 hover:bg-gold-DEFAULT/10"}`}
+                >
+                  Kitchen Management
+                </Button>
+                <Button 
+                  variant={activeCategory === "food" ? "default" : "outline"}
+                  onClick={() => setActiveCategory("food")}
+                  className={`${activeCategory === "food" ? "bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark" : "bg-transparent text-gold-light border-gold-light/30 hover:bg-gold-DEFAULT/10"}`}
+                >
+                  Food Preparation & Quality
+                </Button>
+              </div>
+              
+              <Card className="bg-chef-dark/50 border-gold-dark/30 shadow-lg shadow-gold-DEFAULT/5">
+                <CardContent className="p-6">
+                  <div className="grid grid-cols-1 gap-4">
+                    {dutyCategories[activeCategory as keyof typeof dutyCategories].map((duty, index) => (
+                      <div key={index} className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
+                        <div className="h-6 w-6 rounded-full bg-gold-DEFAULT/20 border border-gold-DEFAULT/40 flex-shrink-0 flex items-center justify-center mt-0.5">
+                          <span className="text-gold-light text-xs font-bold">{index + 1}</span>
+                        </div>
+                        <p className="text-white/80">{duty}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
           
