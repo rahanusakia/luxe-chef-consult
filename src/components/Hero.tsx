@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed" 
          style={{ backgroundImage: 'url("/lovable-uploads/447d23ff-3be3-4464-b6ff-811dd4f764d6.png")' }} id="home">
-      <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/90 to-chef-darker/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/95 to-chef-darker/90"></div>
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="flex justify-center items-center mb-6 animate-fade-in">
           <div className="h-16 w-16 rounded-full bg-gold-dark/40 flex items-center justify-center">
@@ -19,7 +19,7 @@ const Hero = () => {
         <p className="text-xl md:text-2xl text-gold-light font-playfair italic mb-8 max-w-3xl mx-auto animate-fade-in">
           Expert chef consultancy for restaurants, hotels, and fine dining enterprises
         </p>
-        <p className="text-white/90 mb-10 max-w-2xl mx-auto animate-fade-in">
+        <p className="text-white mb-10 max-w-2xl mx-auto animate-fade-in bg-chef-darker/50 p-4 rounded-lg backdrop-blur-sm">
           We bring decades of fine dining expertise to transform your culinary operations, 
           menu development, and staff training. Experience excellence with LuxeChef Consulting.
         </p>
@@ -28,7 +28,7 @@ const Hero = () => {
                                             shadow-lg shadow-gold-DEFAULT/20 transition-all duration-300 transform hover:scale-105">
             <a href="#services">Our Services</a>
           </Button>
-          <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 
+          <Button asChild variant="outline" size="lg" className="border-gold-light text-gold-light hover:bg-gold-light/20 
                                                               shadow-lg shadow-white/10 transition-all duration-300 transform hover:scale-105">
             <a href="#contact">Schedule a Consultation</a>
           </Button>
