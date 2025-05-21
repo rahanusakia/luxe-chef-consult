@@ -1,7 +1,9 @@
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ChefHat, Calendar, Award, School, Briefcase } from "lucide-react";
+import { ChefHat, Calendar, Award, School, Briefcase, Phone, Mail, MapPin, Link } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const CurriculumVitae = () => {
   return (
@@ -36,31 +38,77 @@ const CurriculumVitae = () => {
               </div>
             </div>
             <div className="md:col-span-2 text-white">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gold-light font-playfair">David Cailleba</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gold-light font-playfair">David Claude Cailleba</h2>
               <p className="text-xl mb-4 italic text-white/90">Executive Chef Consultant</p>
-              <p className="mb-6 text-white/80">
-                Highly accomplished Executive Chef with over 25 years of experience in prestigious 
-                establishments worldwide. Specialized in French haute cuisine with extensive 
-                knowledge of international culinary traditions. Recognized for innovative menu 
-                development, operational excellence, and training world-class culinary teams.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                  Culinary Management
-                </span>
-                <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                  Menu Development
-                </span>
-                <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                  Staff Training
-                </span>
+              <div className="mb-6 space-y-3 text-white/80">
+                <p>
+                  With 28+ years of professional Executive Chef experience, I offer my expertise as an Executive Chef / 
+                  Consultant Chef for hotels, resorts, and free-standing restaurant businesses.
+                </p>
+                <p>
+                  If you're looking to improve overall performance, increase revenues with lower costs, and build a professionally 
+                  trained, highly motivated workforce, you should contact me immediately.
+                </p>
+                <p>
+                  As an Executive Chef specialist with proven capabilities of turning businesses around, I can help with quality 
+                  assurance, staff training and development, HACCP implementation, and equipment planning.
+                </p>
+              </div>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-5 w-5 text-gold-light" />
+                  <span className="text-white/80">Jalan Gunung Wayang Bale residence no.19, Kerobokan Denpasar Bali</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="h-5 w-5 text-gold-light" />
+                  <span className="text-white/80">(+62) 82273507458</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-gold-light" />
+                  <span className="text-white/80">davidcailleba4@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Link className="h-5 w-5 text-gold-light" />
+                  <span className="text-white/80">www.konsultanchef.com</span>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-4 mt-4">
                 <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
                   French Cuisine
                 </span>
                 <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                  Restaurant Operations
+                  Italian Cuisine
+                </span>
+                <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
+                  Spanish Cuisine
+                </span>
+                <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
+                  Asian Cuisine
+                </span>
+                <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
+                  Staff Training
                 </span>
               </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Personal Info Card */}
+        <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 mb-8 backdrop-blur-sm animate-fade-in">
+          <div className="flex items-center mb-4">
+            <div className="h-10 w-10 rounded-full bg-gold-dark/30 flex items-center justify-center mr-4">
+              <ChefHat className="h-5 w-5 text-gold-light" />
+            </div>
+            <h2 className="text-2xl font-bold text-white">Personal Information</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <p><span className="text-gold-light">Date of Birth:</span> <span className="text-white/80">September 4th, 1970</span></p>
+              <p><span className="text-gold-light">Place of Birth:</span> <span className="text-white/80">Bayonne, France</span></p>
+            </div>
+            <div className="space-y-2">
+              <p><span className="text-gold-light">Nationality:</span> <span className="text-white/80">France</span></p>
+              <p><span className="text-gold-light">Languages:</span> <span className="text-white/80">French, English, Indonesian Bahasa</span></p>
             </div>
           </div>
         </div>
@@ -69,44 +117,6 @@ const CurriculumVitae = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Education */}
-            <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-              <div className="flex items-center mb-6">
-                <School className="h-6 w-6 text-gold-light mr-3" />
-                <h2 className="text-2xl font-bold text-white">Education</h2>
-              </div>
-              <ScrollArea className="h-[300px] rounded-md pr-4">
-                <div className="space-y-6">
-                  <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                    <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                    <h3 className="text-gold-light font-bold text-lg">Le Cordon Bleu, Paris</h3>
-                    <p className="text-white/70 flex items-center gap-2 mb-2">
-                      <Calendar className="h-4 w-4" /> 1989 - 1991
-                    </p>
-                    <p className="text-white">Grand Diplôme in Culinary Arts and Pastry</p>
-                  </div>
-                  
-                  <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                    <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                    <h3 className="text-gold-light font-bold text-lg">Ecole Supérieure de Cuisine Française, Paris</h3>
-                    <p className="text-white/70 flex items-center gap-2 mb-2">
-                      <Calendar className="h-4 w-4" /> 1988 - 1989
-                    </p>
-                    <p className="text-white">Foundation Culinary Program</p>
-                  </div>
-                  
-                  <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                    <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                    <h3 className="text-gold-light font-bold text-lg">Institute of Hospitality Management, Lyon</h3>
-                    <p className="text-white/70 flex items-center gap-2 mb-2">
-                      <Calendar className="h-4 w-4" /> 1992 - 1993
-                    </p>
-                    <p className="text-white">Advanced Certificate in Culinary Management</p>
-                  </div>
-                </div>
-              </ScrollArea>
-            </div>
-            
             {/* Work Experience */}
             <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
               <div className="flex items-center mb-6">
@@ -117,61 +127,106 @@ const CurriculumVitae = () => {
                 <div className="space-y-8">
                   <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
                     <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                    <h3 className="text-gold-light font-bold text-lg">Executive Chef Consultant</h3>
-                    <p className="text-white/90 mb-1">LuxeChef Consultancy</p>
+                    <h3 className="text-gold-light font-bold text-lg">Executive Chef</h3>
+                    <p className="text-white/90 mb-1">La Toc St Lucia (Caribbean island group Sandal's)</p>
                     <p className="text-white/70 flex items-center gap-2 mb-2">
-                      <Calendar className="h-4 w-4" /> 2017 - Present
+                      <Calendar className="h-4 w-4" /> December 2022 - Present
                     </p>
                     <ul className="text-white/80 list-disc ml-5 space-y-2">
-                      <li>Founded culinary consulting firm serving high-end restaurants and hotels globally</li>
-                      <li>Provided expert menu development for over 30 Michelin-starred establishments</li>
-                      <li>Designed efficient kitchen workflows increasing operational efficiency by 30%</li>
-                      <li>Developed training programs for culinary teams of 5-star hospitality brands</li>
+                      <li>In charge of 9 outlets restaurant and 300 rooms (All-inclusive hotel)</li>
+                      <li>Managing and controlling all kitchen operations</li>
+                      <li>Overseeing training programs for all F&B staff</li>
+                      <li>Creating new food concepts and maintaining food cost control</li>
+                      <li>Maintaining standard cooking methods for all recipes</li>
+                      <li>Creating new menu designs, concepts, and implementation</li>
+                      <li>Supporting General Manager on new projects for the property</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
+                    <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
+                    <h3 className="text-gold-light font-bold text-lg">Consultant Chef International</h3>
+                    <p className="text-white/90 mb-1">French, Italian, Spanish, and Asian Cuisine</p>
+                    <p className="text-white/90 mb-1">Radisson Hotel, Bali Handara Golf and Resorts, Babochkaa Restaurant Jakarta</p>
+                    <p className="text-white/70 flex items-center gap-2 mb-2">
+                      <Calendar className="h-4 w-4" /> May 2018 - December 2022
+                    </p>
+                    <ul className="text-white/80 list-disc ml-5 space-y-2">
+                      <li>Maximized productivity of kitchen staff across overall operations</li>
+                      <li>Maintained food cost at an average of 31%</li>
+                      <li>Created new menus for restaurant and banquet operations</li>
+                      <li>Maintained high work, hygiene, and safety standards</li>
+                      <li>Tracked kitchen expenses and reported to owners</li>
+                      <li>Responsible for kitchen staffing</li>
+                      <li>Assisted in creation and quality of food</li>
                     </ul>
                   </div>
                   
                   <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
                     <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
                     <h3 className="text-gold-light font-bold text-lg">Executive Chef</h3>
-                    <p className="text-white/90 mb-1">Le Ciel Bleu, Paris</p>
+                    <p className="text-white/90 mb-1">Patra Jasa Hotel (5 Star Resort, 228 Rooms, 4 Outlets)</p>
                     <p className="text-white/70 flex items-center gap-2 mb-2">
-                      <Calendar className="h-4 w-4" /> 2010 - 2017
+                      <Calendar className="h-4 w-4" /> May 2017 - May 2018
                     </p>
                     <ul className="text-white/80 list-disc ml-5 space-y-2">
-                      <li>Led culinary team of 35 staff at 2 Michelin-starred restaurant</li>
-                      <li>Developed innovative seasonal menus celebrating regional French produce</li>
-                      <li>Established supplier relationships with premier local farmers and producers</li>
-                      <li>Oversaw €3M annual food operations budget with consistent profitability</li>
+                      <li>Managed and controlled a kitchen team of 47 staff members</li>
+                      <li>Oversaw training programs for all F&B staff</li>
+                      <li>Maintained food cost at an average of 33%</li>
+                      <li>Created new menu designs, concepts and implemented them</li>
+                      <li>Supported General Manager on new projects</li>
+                      <li>Maintained proper hygiene standards and up-to-date files for audit inspections</li>
                     </ul>
                   </div>
                   
                   <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
                     <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                    <h3 className="text-gold-light font-bold text-lg">Head Chef</h3>
-                    <p className="text-white/90 mb-1">The Grandeur, London</p>
+                    <h3 className="text-gold-light font-bold text-lg">Executive Chef</h3>
+                    <p className="text-white/90 mb-1">The Seminyak Beach & Resort and Spa, Bali (5 Star Hotel, 108 Suites, 2 Outlets)</p>
                     <p className="text-white/70 flex items-center gap-2 mb-2">
-                      <Calendar className="h-4 w-4" /> 2005 - 2010
+                      <Calendar className="h-4 w-4" /> April 2015 - April 2017
                     </p>
                     <ul className="text-white/80 list-disc ml-5 space-y-2">
-                      <li>Managed kitchen operations for 5-star hotel's flagship restaurant</li>
-                      <li>Led team to earn first Michelin star within 2 years of opening</li>
-                      <li>Created signature French-British fusion cuisine concept</li>
-                      <li>Mentored 12 sous chefs who went on to head chef positions</li>
+                      <li>Maintained complete control of the kitchen and commanded staff respect</li>
+                      <li>Managed the Head Chef, Sous Chef and Chef de Partie</li>
+                      <li>Maintained a food cost average of 28%</li>
+                      <li>Approved all prepared food items and created new menu items</li>
+                      <li>Performed administrative duties including ordering and reporting</li>
+                      <li>Responsible for kitchen staffing and maintaining high safety standards</li>
                     </ul>
                   </div>
                   
                   <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
                     <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                    <h3 className="text-gold-light font-bold text-lg">Sous Chef</h3>
-                    <p className="text-white/90 mb-1">L'Etoile du Nord, New York</p>
+                    <h3 className="text-gold-light font-bold text-lg">Executive Chef</h3>
+                    <p className="text-white/90 mb-1">The Meridien Hotel managed by Starwood (118 Rooms & 2 outlets)</p>
                     <p className="text-white/70 flex items-center gap-2 mb-2">
-                      <Calendar className="h-4 w-4" /> 2000 - 2005
+                      <Calendar className="h-4 w-4" /> February 2014 - February 2015
                     </p>
                     <ul className="text-white/80 list-disc ml-5 space-y-2">
-                      <li>Second-in-command in 3 Michelin-starred French restaurant</li>
-                      <li>Supervised team of 22 chefs across 5 kitchen stations</li>
-                      <li>Led daily pre-service briefings and quality control procedures</li>
-                      <li>Developed new menu items that became signature restaurant dishes</li>
+                      <li>Planned menus for all food outlets</li>
+                      <li>Scheduled and coordinated work of chefs and kitchen staff</li>
+                      <li>Maintained high standards of sanitation and safety</li>
+                      <li>Established controls to minimize food waste and theft</li>
+                      <li>Developed standard recipes and techniques for quality food preparation</li>
+                      <li>Maintained a food cost average of 31%</li>
+                      <li>Prepared data for budgets and monitored financial results</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
+                    <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
+                    <h3 className="text-gold-light font-bold text-lg">Chef de Cuisine</h3>
+                    <p className="text-white/90 mb-1">Sogeres Company (operator Alain Ducasse) (France St. Jean de Luz)</p>
+                    <p className="text-white/70 flex items-center gap-2 mb-2">
+                      <Calendar className="h-4 w-4" /> January 2013 - January 2014
+                    </p>
+                    <ul className="text-white/80 list-disc ml-5 space-y-2">
+                      <li>Responsible for main kitchen operations</li>
+                      <li>Developed kitchen brigade of 65 staff members</li>
+                      <li>Maintained food cost at company standards</li>
+                      <li>Improved food quality, hygiene and sanitation</li>
+                      <li>Assisted purchasing department to find optimal products</li>
                     </ul>
                   </div>
                 </div>
@@ -181,169 +236,121 @@ const CurriculumVitae = () => {
           
           {/* Right Column */}
           <div className="lg:col-span-1 space-y-8">
+            {/* Education */}
+            <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
+              <div className="flex items-center mb-6">
+                <School className="h-6 w-6 text-gold-light mr-3" />
+                <h2 className="text-2xl font-bold text-white">Education</h2>
+              </div>
+              <div className="space-y-6">
+                <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
+                  <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-1"></div>
+                  <h3 className="text-gold-light font-bold">Level Diploma in Professional Cookery</h3>
+                  <p className="text-white/70 flex items-center gap-2">
+                    <Calendar className="h-4 w-4" /> 1989 - 1992
+                  </p>
+                  <p className="text-white/80">Chambres des métiers Bayonne</p>
+                </div>
+                
+                <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
+                  <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-1"></div>
+                  <h3 className="text-gold-light font-bold">Apprenticeship with contract</h3>
+                  <p className="text-white/70">Plumauzille Catering, Anglet France</p>
+                  <p className="text-white/70 flex items-center gap-2">
+                    <Calendar className="h-4 w-4" /> 1989 - 1992
+                  </p>
+                </div>
+              </div>
+            </div>
+            
             {/* Awards */}
             <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
               <div className="flex items-center mb-6">
                 <Award className="h-6 w-6 text-gold-light mr-3" />
-                <h2 className="text-2xl font-bold text-white">Awards</h2>
+                <h2 className="text-2xl font-bold text-white">Skills & Expertise</h2>
               </div>
-              <div className="space-y-5">
-                <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                  <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-1"></div>
-                  <h3 className="text-gold-light font-bold">Chef of the Year</h3>
-                  <p className="text-white/70">International Culinary Federation, 2016</p>
-                </div>
+              <div className="space-y-4">
+                <Card className="bg-chef-dark border-gold-dark/30">
+                  <CardContent className="p-4">
+                    <h4 className="text-gold-light font-semibold mb-2">Culinary Expertise</h4>
+                    <ul className="text-white/80 list-disc ml-5 space-y-1">
+                      <li>French Cuisine</li>
+                      <li>Italian Cuisine</li>
+                      <li>Spanish Cuisine</li>
+                      <li>Asian Cuisine</li>
+                      <li>Pastry Basics</li>
+                    </ul>
+                  </CardContent>
+                </Card>
                 
-                <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                  <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-1"></div>
-                  <h3 className="text-gold-light font-bold">Best Innovation in French Cuisine</h3>
-                  <p className="text-white/70">Gourmet Excellence Awards, 2014</p>
-                </div>
+                <Card className="bg-chef-dark border-gold-dark/30">
+                  <CardContent className="p-4">
+                    <h4 className="text-gold-light font-semibold mb-2">Management</h4>
+                    <ul className="text-white/80 list-disc ml-5 space-y-1">
+                      <li>Kitchen Operations</li>
+                      <li>Staff Training</li>
+                      <li>Quality Assurance</li>
+                      <li>HACCP Implementation</li>
+                      <li>Food Cost Control</li>
+                    </ul>
+                  </CardContent>
+                </Card>
                 
-                <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                  <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-1"></div>
-                  <h3 className="text-gold-light font-bold">Michelin Star Achievement</h3>
-                  <p className="text-white/70">Le Ciel Bleu (2 stars), 2011-2017</p>
-                </div>
-                
-                <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                  <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-1"></div>
-                  <h3 className="text-gold-light font-bold">Michelin Star Achievement</h3>
-                  <p className="text-white/70">The Grandeur (1 star), 2007-2010</p>
-                </div>
+                <Card className="bg-chef-dark border-gold-dark/30">
+                  <CardContent className="p-4">
+                    <h4 className="text-gold-light font-semibold mb-2">Languages</h4>
+                    <ul className="text-white/80 list-disc ml-5 space-y-1">
+                      <li>French (Native)</li>
+                      <li>English (Fluent)</li>
+                      <li>Indonesian Bahasa (Proficient)</li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
             </div>
             
-            {/* Skills */}
+            {/* References */}
             <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-              <h2 className="text-2xl font-bold text-white mb-6">Expertise</h2>
-              <Table>
-                <TableHeader>
-                  <TableRow className="border-gold-dark/30">
-                    <TableHead className="text-gold-light">Skill</TableHead>
-                    <TableHead className="text-gold-light text-right">Level</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow className="border-gold-dark/30">
-                    <TableCell className="text-white">French Haute Cuisine</TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex justify-end">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div key={i} className="w-2 h-2 rounded-full bg-gold-DEFAULT"></div>
-                          ))}
-                        </div>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold-dark/30">
-                    <TableCell className="text-white">Molecular Gastronomy</TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex justify-end">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div key={i} className={`w-2 h-2 rounded-full ${i < 4 ? 'bg-gold-DEFAULT' : 'bg-gold-DEFAULT/30'}`}></div>
-                          ))}
-                        </div>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold-dark/30">
-                    <TableCell className="text-white">Kitchen Management</TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex justify-end">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div key={i} className="w-2 h-2 rounded-full bg-gold-DEFAULT"></div>
-                          ))}
-                        </div>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold-dark/30">
-                    <TableCell className="text-white">Menu Development</TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex justify-end">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div key={i} className="w-2 h-2 rounded-full bg-gold-DEFAULT"></div>
-                          ))}
-                        </div>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold-dark/30">
-                    <TableCell className="text-white">Wine Pairing</TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex justify-end">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div key={i} className={`w-2 h-2 rounded-full ${i < 4 ? 'bg-gold-DEFAULT' : 'bg-gold-DEFAULT/30'}`}></div>
-                          ))}
-                        </div>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold-dark/30">
-                    <TableCell className="text-white">Staff Training</TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex justify-end">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div key={i} className="w-2 h-2 rounded-full bg-gold-DEFAULT"></div>
-                          ))}
-                        </div>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </div>
-            
-            {/* Languages */}
-            <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-              <h2 className="text-2xl font-bold text-white mb-6">Languages</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">Professional References</h2>
               <div className="space-y-4">
                 <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-white">French</span>
-                    <span className="text-gold-light">Native</span>
-                  </div>
-                  <div className="w-full bg-chef-dark rounded-full h-2">
-                    <div className="bg-gold-DEFAULT h-2 rounded-full" style={{ width: '100%' }}></div>
-                  </div>
+                  <p className="text-gold-light font-bold">Bali Handara Golf</p>
+                  <p className="text-white/80">Owner</p>
+                  <p className="text-white/70">Mobile: +628118114555</p>
+                  <p className="text-white/70">Email: Salviandra@gmail.com</p>
                 </div>
                 
                 <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-white">English</span>
-                    <span className="text-gold-light">Fluent</span>
-                  </div>
-                  <div className="w-full bg-chef-dark rounded-full h-2">
-                    <div className="bg-gold-DEFAULT h-2 rounded-full" style={{ width: '95%' }}></div>
-                  </div>
+                  <p className="text-gold-light font-bold">Patra Jasa Hotel</p>
+                  <p className="text-white/80">Askar Daeng Kamis (General Manager)</p>
+                  <p className="text-white/70">Mobile: +6281803614636</p>
                 </div>
                 
                 <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-white">Italian</span>
-                    <span className="text-gold-light">Advanced</span>
-                  </div>
-                  <div className="w-full bg-chef-dark rounded-full h-2">
-                    <div className="bg-gold-DEFAULT h-2 rounded-full" style={{ width: '80%' }}></div>
-                  </div>
+                  <p className="text-gold-light font-bold">The Seminyak Beach and Resorts and Spa</p>
+                  <p className="text-white/80">Mister Jos (Owner)</p>
+                  <p className="text-white/70">Mobile: +62816507737</p>
                 </div>
                 
                 <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-white">Spanish</span>
-                    <span className="text-gold-light">Intermediate</span>
-                  </div>
-                  <div className="w-full bg-chef-dark rounded-full h-2">
-                    <div className="bg-gold-DEFAULT h-2 rounded-full" style={{ width: '60%' }}></div>
-                  </div>
+                  <p className="text-gold-light font-bold">Bali Mandira Hotel</p>
+                  <p className="text-white/80">Pak Agus Pribadi (Owner)</p>
+                  <p className="text-white/70">Mobile: +628123842021</p>
                 </div>
+              </div>
+              
+              <div className="mt-6 text-center">
+                <p className="text-white/80 italic">Additional references available upon request</p>
+              </div>
+            </div>
+            
+            <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-white mb-4">Ready to elevate your culinary business?</h3>
+                <Button asChild size="lg" className="bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark font-medium px-8 
+                                                  shadow-lg shadow-gold-DEFAULT/20 transition-all duration-300 transform hover:scale-105">
+                  <a href="/#contact">Contact David Cailleba</a>
+                </Button>
               </div>
             </div>
           </div>
