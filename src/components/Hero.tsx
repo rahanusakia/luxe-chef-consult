@@ -13,13 +13,13 @@ const Hero = () => {
             <ChefHat className="h-8 w-8 text-gold-light" />
           </div>
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in bg-chef-darker/60 inline-block px-6 py-2 rounded-lg shadow-lg backdrop-blur-sm">
           Elevate Your <span className="text-gold-light">Culinary</span> Business
         </h1>
-        <p className="text-xl md:text-2xl text-gold-light font-playfair italic mb-8 max-w-3xl mx-auto animate-fade-in">
+        <p className="text-xl md:text-2xl text-gold-light font-playfair italic mb-8 max-w-3xl mx-auto animate-fade-in bg-chef-darker/60 p-4 rounded-lg shadow-lg backdrop-blur-sm">
           Expert chef consultancy for restaurants, hotels, and fine dining enterprises
         </p>
-        <p className="text-white mb-10 max-w-2xl mx-auto animate-fade-in bg-chef-darker/50 p-4 rounded-lg backdrop-blur-sm">
+        <p className="text-white mb-10 max-w-2xl mx-auto animate-fade-in bg-chef-darker/70 p-4 rounded-lg shadow-lg backdrop-blur-sm">
           We bring decades of fine dining expertise to transform your culinary operations, 
           menu development, and staff training. Experience excellence with LuxeChef Consulting.
         </p>
@@ -29,7 +29,7 @@ const Hero = () => {
             <a href="#services">Our Services</a>
           </Button>
           <Button asChild variant="outline" size="lg" className="border-gold-light text-gold-light hover:bg-gold-light/20 
-                                                              shadow-lg shadow-white/10 transition-all duration-300 transform hover:scale-105">
+                                                              shadow-lg shadow-gold-light/10 transition-all duration-300 transform hover:scale-105">
             <a href="#contact">Schedule a Consultation</a>
           </Button>
         </div>

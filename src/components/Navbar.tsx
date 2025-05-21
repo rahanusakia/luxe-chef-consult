@@ -2,10 +2,12 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChefHat, Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,23 +22,41 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu when changing routes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  const isHomePage = location.pathname === '/';
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-chef-dark py-2 shadow-lg' : 'bg-transparent py-6'
     }`}>
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#" className="flex items-center gap-2 text-white">
+        <Link to="/" className="flex items-center gap-2 text-white">
           <ChefHat className="h-6 w-6 text-gold-light" />
           <span className="font-playfair text-xl md:text-2xl font-semibold">LuxeChef</span>
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#about" className="text-white hover:text-gold-light transition-colors">About</a>
-          <a href="#services" className="text-white hover:text-gold-light transition-colors">Services</a>
-          <a href="#testimonials" className="text-white hover:text-gold-light transition-colors">Testimonials</a>
+          {isHomePage ? (
+            <>
+              <a href="#about" className="text-white hover:text-gold-light transition-colors">About</a>
+              <a href="#services" className="text-white hover:text-gold-light transition-colors">Services</a>
+              <a href="#testimonials" className="text-white hover:text-gold-light transition-colors">Testimonials</a>
+            </>
+          ) : (
+            <Link to="/" className="text-white hover:text-gold-light transition-colors">Home</Link>
+          )}
+          <Link to="/cv" className="text-white hover:text-gold-light transition-colors">CV</Link>
           <Button asChild variant="outline" className="border-gold-light text-gold-light hover:bg-gold-light hover:text-chef-dark">
-            <a href="#contact">Contact Us</a>
+            {isHomePage ? (
+              <a href="#contact">Contact Us</a>
+            ) : (
+              <Link to="/#contact">Contact Us</Link>
+            )}
           </Button>
         </div>
 
@@ -53,34 +73,26 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-chef-darker text-white absolute top-full left-0 w-full py-4 shadow-lg animate-fade-in">
           <div className="flex flex-col space-y-4 px-6">
-            <a 
-              href="#about" 
-              className="py-2 hover:text-gold-light transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </a>
-            <a 
-              href="#services" 
-              className="py-2 hover:text-gold-light transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Services
-            </a>
-            <a 
-              href="#testimonials" 
-              className="py-2 hover:text-gold-light transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Testimonials
-            </a>
+            {isHomePage ? (
+              <>
+                <a href="#about" className="py-2 hover:text-gold-light transition-colors">About</a>
+                <a href="#services" className="py-2 hover:text-gold-light transition-colors">Services</a>
+                <a href="#testimonials" className="py-2 hover:text-gold-light transition-colors">Testimonials</a>
+              </>
+            ) : (
+              <Link to="/" className="py-2 hover:text-gold-light transition-colors">Home</Link>
+            )}
+            <Link to="/cv" className="py-2 hover:text-gold-light transition-colors">CV</Link>
             <Button 
               asChild 
               variant="outline" 
               className="border-gold-light text-gold-light hover:bg-gold-light hover:text-chef-dark w-full"
-              onClick={() => setMobileMenuOpen(false)}
             >
-              <a href="#contact">Contact Us</a>
+              {isHomePage ? (
+                <a href="#contact">Contact Us</a>
+              ) : (
+                <Link to="/#contact">Contact Us</Link>
+              )}
             </Button>
           </div>
         </div>
