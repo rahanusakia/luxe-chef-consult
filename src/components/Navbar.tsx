@@ -52,12 +52,9 @@ const Navbar = () => {
           )}
           <Link to="/cv" className="text-white hover:text-gold-light transition-colors">CV</Link>
           <Link to="/consultant-fee" className="text-white hover:text-gold-light transition-colors">Consultant Fee</Link>
+          <Link to="/contact" className="text-white hover:text-gold-light transition-colors">Contact</Link>
           <Button asChild variant="outline" className="border-gold-light text-gold-light hover:bg-gold-light hover:text-chef-dark">
-            {isHomePage ? (
-              <a href="#contact">Contact Us</a>
-            ) : (
-              <Link to="/#contact">Contact Us</Link>
-            )}
+            <Link to="/contact">Get Started</Link>
           </Button>
         </div>
 
@@ -85,16 +82,13 @@ const Navbar = () => {
             )}
             <Link to="/cv" className="py-2 hover:text-gold-light transition-colors">CV</Link>
             <Link to="/consultant-fee" className="py-2 hover:text-gold-light transition-colors">Consultant Fee</Link>
+            <Link to="/contact" className="py-2 hover:text-gold-light transition-colors">Contact</Link>
             <Button 
               asChild 
               variant="outline" 
               className="border-gold-light text-gold-light hover:bg-gold-light hover:text-chef-dark w-full"
             >
-              {isHomePage ? (
-                <a href="#contact">Contact Us</a>
-              ) : (
-                <Link to="/#contact">Contact Us</Link>
-              )}
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
