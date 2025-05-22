@@ -89,7 +89,7 @@ const ConsultantFee = () => {
                 <div className="bg-chef-dark p-6 rounded-lg border border-gold-dark/10">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="h-8 w-8 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center">
-                      <span className="text-gold-DEFAULT font-bold">2</span>
+                      <span className="font-bold text-amber-200">2</span>
                     </div>
                     <h4 className="text-xl font-semibold text-white">Period II</h4>
                   </div>
