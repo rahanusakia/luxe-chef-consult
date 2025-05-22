@@ -51,6 +51,7 @@ const Navbar = () => {
             <Link to="/" className="text-white hover:text-gold-light transition-colors">Home</Link>
           )}
           <Link to="/cv" className="text-white hover:text-gold-light transition-colors">CV</Link>
+          <Link to="/consultant-fee" className="text-white hover:text-gold-light transition-colors">Consultant Fee</Link>
           <Button asChild variant="outline" className="border-gold-light text-gold-light hover:bg-gold-light hover:text-chef-dark">
             {isHomePage ? (
               <a href="#contact">Contact Us</a>
@@ -83,6 +84,7 @@ const Navbar = () => {
               <Link to="/" className="py-2 hover:text-gold-light transition-colors">Home</Link>
             )}
             <Link to="/cv" className="py-2 hover:text-gold-light transition-colors">CV</Link>
+            <Link to="/consultant-fee" className="py-2 hover:text-gold-light transition-colors">Consultant Fee</Link>
             <Button 
               asChild 
               variant="outline" 

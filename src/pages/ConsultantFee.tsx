@@ -1,0 +1,162 @@
+
+import { ArrowRight, Check, CreditCard, DollarSign, CalendarDays, Clock } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { Link } from "react-router-dom";
+
+const ConsultantFee = () => {
+  return (
+    <div className="min-h-screen bg-chef-light">
+      {/* Page Header */}
+      <div 
+        className="relative bg-cover bg-center py-28" 
+        style={{ backgroundImage: 'url("/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png")' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/95 to-chef-darker/90"></div>
+        <div className="relative z-10 container mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Consultant <span className="text-gold-light">Fee</span>
+          </h1>
+          <div className="flex items-center justify-center text-sm md:text-base text-white/80 space-x-2">
+            <Link to="/" className="hover:text-gold-light transition-colors">Home</Link>
+            <ArrowRight size={14} className="text-gold-light" />
+            <span className="text-gold-light">Consultant Fee</span>
+          </div>
+        </div>
+      </div>
+
+      <section className="py-20 container mx-auto px-6">
+        <div className="max-w-4xl mx-auto">
+          {/* Fee Details Card */}
+          <Card className="mb-12 shadow-lg border-gold-dark/20 overflow-hidden">
+            <CardHeader className="bg-chef-dark text-white py-6 px-8 border-b border-gold-dark/30">
+              <h2 className="text-3xl font-playfair font-semibold">
+                Consultant Fee Details
+              </h2>
+            </CardHeader>
+            <CardContent className="p-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="flex flex-col items-center p-6 bg-chef-dark/5 rounded-lg border border-gold-dark/10">
+                  <DollarSign className="h-10 w-10 text-gold-DEFAULT mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Fee</h3>
+                  <p className="text-lg font-semibold text-gold-dark">Rp 20.000.000</p>
+                </div>
+                <div className="flex flex-col items-center p-6 bg-chef-dark/5 rounded-lg border border-gold-dark/10">
+                  <CalendarDays className="h-10 w-10 text-gold-DEFAULT mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Duration</h3>
+                  <p className="text-lg font-semibold">12 Days</p>
+                  <p className="text-sm text-gray-600">(Sunday Off)</p>
+                </div>
+                <div className="flex flex-col items-center p-6 bg-chef-dark/5 rounded-lg border border-gold-dark/10">
+                  <Clock className="h-10 w-10 text-gold-DEFAULT mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Daily Hours</h3>
+                  <p className="text-lg font-semibold">4 Hours</p>
+                  <p className="text-sm text-gray-600">2 Food Items Training</p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-playfair font-semibold mb-4 text-chef-dark">Terms & Conditions</h3>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "20 items of menu/Rp 1.000.000 per item menu (all type of food)",
+                  "Training will occur every day during 12 days, with Sundays as days off",
+                  "4 hours per day with 2 food items training daily",
+                  "Includes meals allowance during training",
+                  "For extra day training: Additional charge at Rp 1.000.000/day (4 hours)",
+                  "Other Menu / Warranty / Substitution: Depending on the deal site",
+                  "If training occurs outside of Bali Area: Extra charges apply for flight tickets (return), accommodation & meals"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="h-6 w-6 rounded-full bg-gold-DEFAULT/20 flex-shrink-0 flex items-center justify-center mt-0.5">
+                      <Check size={14} className="text-gold-DEFAULT" />
+                    </div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Payment Method Card */}
+          <Card className="mb-12 shadow-lg border-gold-dark/20 overflow-hidden">
+            <CardHeader className="bg-chef-dark text-white py-6 px-8 border-b border-gold-dark/30">
+              <h2 className="text-3xl font-playfair font-semibold">
+                Payment Method
+              </h2>
+            </CardHeader>
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-playfair font-semibold mb-4 text-chef-dark">Payment Schedule</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-chef-dark/5 p-6 rounded-lg border border-gold-dark/10">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-8 w-8 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center">
+                      <span className="text-gold-DEFAULT font-bold">1</span>
+                    </div>
+                    <h4 className="text-xl font-semibold">Period I</h4>
+                  </div>
+                  <p className="pl-11">Down Payment (DP) 50% paid at the beginning</p>
+                </div>
+                <div className="bg-chef-dark/5 p-6 rounded-lg border border-gold-dark/10">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-8 w-8 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center">
+                      <span className="text-gold-DEFAULT font-bold">2</span>
+                    </div>
+                    <h4 className="text-xl font-semibold">Period II</h4>
+                  </div>
+                  <p className="pl-11">Repayment 50% upon completion</p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-playfair font-semibold mb-4 text-chef-dark">Bank Details</h3>
+              <div className="bg-chef-dark/5 p-6 rounded-lg border border-gold-dark/10 mb-8">
+                <Table>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium w-1/3 py-3 border-b border-gold-dark/10">Bank Name</TableCell>
+                      <TableCell className="py-3 border-b border-gold-dark/10">BCA</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium w-1/3 py-3 border-b border-gold-dark/10">Account Number</TableCell>
+                      <TableCell className="py-3 border-b border-gold-dark/10">4040471273</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium w-1/3 py-3 border-b border-gold-dark/10">Account Name</TableCell>
+                      <TableCell className="py-3 border-b border-gold-dark/10">David Cailleba</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium w-1/3 py-3 border-b border-gold-dark/10">Phone/WhatsApp</TableCell>
+                      <TableCell className="py-3 border-b border-gold-dark/10">+6282273507458</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium w-1/3 py-3">Email</TableCell>
+                      <TableCell className="py-3">davidcailleba4@gmail.com</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+
+              <div className="bg-gold-light/10 border border-gold-DEFAULT/20 p-5 rounded-lg text-center">
+                <p className="text-chef-dark font-medium">
+                  Note: Any different consultations customized by request will be charged different fees.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="flex justify-center">
+            <Link 
+              to="/#contact" 
+              className="bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark font-medium px-8 py-3 
+                        rounded shadow-lg shadow-gold-DEFAULT/20 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              <CreditCard size={18} />
+              Request Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ConsultantFee;
