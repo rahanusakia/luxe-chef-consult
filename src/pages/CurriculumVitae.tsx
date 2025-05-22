@@ -1,6 +1,6 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ChefHat, Calendar, Award, School, Briefcase, Phone, Mail, MapPin, Link, ClipboardList } from "lucide-react";
+import { ChefHat, Calendar, Award, School, Briefcase, Phone, Mail, MapPin, Link, ClipboardList, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -38,18 +38,33 @@ const CurriculumVitae = () => {
     <div className="bg-chef-dark min-h-screen">
       <Navbar />
       
-      <div className="pt-24 pb-16">
+      {/* Page Header - Added to match other pages */}
+      <div 
+        className="relative bg-cover bg-center py-28" 
+        style={{ backgroundImage: 'url("/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png")' }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/95 to-chef-darker/90"></div>
+        <div className="relative z-10 container mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Curriculum <span className="text-gold-light">Vitae</span>
+          </h1>
+          <div className="flex items-center justify-center text-sm md:text-base text-white/80 space-x-2">
+            <Link to="/" className="hover:text-gold-light transition-colors">Home</Link>
+            <ArrowRight size={14} className="text-gold-light" />
+            <span className="text-gold-light">Curriculum Vitae</span>
+          </div>
+        </div>
+      </div>
+      
+      <div className="pt-12 pb-16">
         <div className="container mx-auto px-6">
-          {/* Header */}
+          {/* Header - Modified to reduce vertical space since we have the page header now */}
           <div className="text-center mb-12">
             <div className="flex justify-center items-center mb-6 animate-fade-in">
               <div className="h-16 w-16 rounded-full bg-gold-dark/40 flex items-center justify-center">
                 <ChefHat className="h-8 w-8 text-gold-light" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in">
-              Curriculum <span className="text-gold-light">Vitae</span>
-            </h1>
             <p className="text-xl text-gold-light font-playfair italic mb-4 max-w-3xl mx-auto animate-fade-in">
               The Professional Journey of David Cailleba
             </p>
