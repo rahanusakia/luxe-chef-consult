@@ -1,21 +1,17 @@
-
 import { ArrowRight, Check, CreditCard, DollarSign, CalendarDays, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
 const ConsultantFee = () => {
-  return (
-    <div className="min-h-screen bg-chef-dark">
+  return <div className="min-h-screen bg-chef-dark">
       <Navbar />
       
       {/* Page Header */}
-      <div 
-        className="relative bg-cover bg-center py-28" 
-        style={{ backgroundImage: 'url("/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png")' }}
-      >
+      <div className="relative bg-cover bg-center py-28" style={{
+      backgroundImage: 'url("/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png")'
+    }}>
         <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/95 to-chef-darker/90"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -61,22 +57,12 @@ const ConsultantFee = () => {
 
               <h3 className="text-2xl font-playfair font-semibold mb-4 text-white">Terms & Conditions</h3>
               <ul className="space-y-3 mb-8">
-                {[
-                  "20 items of menu/Rp 1.000.000 per item menu (all type of food)",
-                  "Training will occur every day during 12 days, with Sundays as days off",
-                  "4 hours per day with 2 food items training daily",
-                  "Includes meals allowance during training",
-                  "For extra day training: Additional charge at Rp 1.000.000/day (4 hours)",
-                  "Other Menu / Warranty / Substitution: Depending on the deal site",
-                  "If training occurs outside of Bali Area: Extra charges apply for flight tickets (return), accommodation & meals"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-white/80">
+                {["20 items of menu/Rp 1.000.000 per item menu (all type of food)", "Training will occur every day during 12 days, with Sundays as days off", "4 hours per day with 2 food items training daily", "Includes meals allowance during training", "For extra day training: Additional charge at Rp 1.000.000/day (4 hours)", "Other Menu / Warranty / Substitution: Depending on the deal site", "If training occurs outside of Bali Area: Extra charges apply for flight tickets (return), accommodation & meals"].map((item, index) => <li key={index} className="flex items-start gap-3 text-white/80">
                     <div className="h-6 w-6 rounded-full bg-gold-DEFAULT/20 flex-shrink-0 flex items-center justify-center mt-0.5">
                       <Check size={14} className="text-gold-DEFAULT" />
                     </div>
                     <span>{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </CardContent>
           </Card>
@@ -94,7 +80,7 @@ const ConsultantFee = () => {
                 <div className="bg-chef-dark p-6 rounded-lg border border-gold-dark/10">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="h-8 w-8 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center">
-                      <span className="text-gold-DEFAULT font-bold">1</span>
+                      <span className="font-bold text-amber-200">1</span>
                     </div>
                     <h4 className="text-xl font-semibold text-white">Period I</h4>
                   </div>
@@ -148,11 +134,8 @@ const ConsultantFee = () => {
           </Card>
 
           <div className="flex justify-center">
-            <Link 
-              to="/#contact" 
-              className="bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark font-medium px-8 py-3 
-                        rounded shadow-lg shadow-gold-DEFAULT/20 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-            >
+            <Link to="/#contact" className="bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark font-medium px-8 py-3 
+                        rounded shadow-lg shadow-gold-DEFAULT/20 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
               <CreditCard size={18} />
               Request Consultation
             </Link>
@@ -161,8 +144,6 @@ const ConsultantFee = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ConsultantFee;
