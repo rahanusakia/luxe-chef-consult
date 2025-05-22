@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <ChefHat className="h-6 w-6 text-gold-light" />
+              <ChefHat className="h-6 w-6 text-gold-light" strokeWidth={1.5} />
               <span className="font-playfair text-xl font-semibold">LuxeChef</span>
             </div>
             <p className="text-white/70 mb-6">

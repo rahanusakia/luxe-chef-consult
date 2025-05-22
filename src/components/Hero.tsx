@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="flex justify-center items-center mb-6 animate-fade-in">
           <div className="h-16 w-16 rounded-full bg-gold-dark/40 flex items-center justify-center">
-            <ChefHat className="h-8 w-8 text-gold-light" />
+            <ChefHat className="h-8 w-8 text-gold-light" strokeWidth={1.5} />
           </div>
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in bg-chef-darker/60 inline-block px-6 py-2 rounded-lg shadow-lg backdrop-blur-sm">

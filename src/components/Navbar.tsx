@@ -35,7 +35,7 @@ const Navbar = () => {
     }`}>
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 text-white">
-          <ChefHat className="h-6 w-6 text-gold-light" />
+          <ChefHat className="h-6 w-6 text-gold-light" strokeWidth={1.5} />
           <span className="font-playfair text-xl md:text-2xl font-semibold">LuxeChef</span>
         </Link>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
           className="md:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={24} className="text-white" /> : <Menu size={24} className="text-white" />}
         </button>
       </div>
 
