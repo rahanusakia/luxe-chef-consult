@@ -1,22 +1,19 @@
-
 import PageHeader from "@/components/PageHeader";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, GraduationCap, Award, Star, Languages, ChefHat } from "lucide-react";
-
 const CurriculumVitae = () => {
-  return (
-    <PageLayout>
-      <PageHeader
-        title="Curriculum Vitae"
-        backgroundImage="/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "CV", href: "/cv", isCurrent: true }
-        ]}
-      />
+  return <PageLayout>
+      <PageHeader title="Curriculum Vitae" backgroundImage="/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png" breadcrumbs={[{
+      label: "Home",
+      href: "/"
+    }, {
+      label: "CV",
+      href: "/cv",
+      isCurrent: true
+    }]} />
       
       <section className="py-20 container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
@@ -25,11 +22,7 @@ const CurriculumVitae = () => {
               <div className="sticky top-24">
                 <Card className="overflow-hidden border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
                   <div className="aspect-square relative overflow-hidden">
-                    <img 
-                      src="/lovable-uploads/447d23ff-3be3-4464-b6ff-811dd4f764d6.png" 
-                      alt="Chef David Cailleba" 
-                      className="object-cover w-full h-full"
-                    />
+                    <img src="/lovable-uploads/447d23ff-3be3-4464-b6ff-811dd4f764d6.png" alt="Chef David Cailleba" className="object-cover w-full h-full" />
                   </div>
                   <CardContent className="p-6">
                     <h2 className="text-2xl font-bold text-white mb-2">David Cailleba</h2>
@@ -71,7 +64,7 @@ const CurriculumVitae = () => {
             
             <div className="lg:col-span-2">
               <Tabs defaultValue="experience" className="w-full">
-                <TabsList className="grid grid-cols-4 mb-8">
+                <TabsList className="grid grid-cols-4 mb-8 bg-neutral-900">
                   <TabsTrigger value="experience" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-chef-dark">
                     <Briefcase className="h-4 w-4 mr-2" />
                     Experience
@@ -194,7 +187,9 @@ const CurriculumVitae = () => {
                             <span className="text-gold-light">Expert</span>
                           </div>
                           <div className="h-2 bg-chef-dark rounded-full">
-                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '95%' }}></div>
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{
+                            width: '95%'
+                          }}></div>
                           </div>
                         </div>
                         
@@ -204,7 +199,9 @@ const CurriculumVitae = () => {
                             <span className="text-gold-light">Expert</span>
                           </div>
                           <div className="h-2 bg-chef-dark rounded-full">
-                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '90%' }}></div>
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{
+                            width: '90%'
+                          }}></div>
                           </div>
                         </div>
                         
@@ -214,7 +211,9 @@ const CurriculumVitae = () => {
                             <span className="text-gold-light">Expert</span>
                           </div>
                           <div className="h-2 bg-chef-dark rounded-full">
-                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '95%' }}></div>
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{
+                            width: '95%'
+                          }}></div>
                           </div>
                         </div>
                         
@@ -224,7 +223,9 @@ const CurriculumVitae = () => {
                             <span className="text-gold-light">Expert</span>
                           </div>
                           <div className="h-2 bg-chef-dark rounded-full">
-                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '90%' }}></div>
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{
+                            width: '90%'
+                          }}></div>
                           </div>
                         </div>
                         
@@ -234,7 +235,9 @@ const CurriculumVitae = () => {
                             <span className="text-gold-light">Advanced</span>
                           </div>
                           <div className="h-2 bg-chef-dark rounded-full">
-                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '85%' }}></div>
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{
+                            width: '85%'
+                          }}></div>
                           </div>
                         </div>
                         
@@ -244,7 +247,9 @@ const CurriculumVitae = () => {
                             <span className="text-gold-light">Advanced</span>
                           </div>
                           <div className="h-2 bg-chef-dark rounded-full">
-                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '80%' }}></div>
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{
+                            width: '80%'
+                          }}></div>
                           </div>
                         </div>
                       </div>
@@ -396,8 +401,6 @@ const CurriculumVitae = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default CurriculumVitae;
