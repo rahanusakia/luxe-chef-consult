@@ -5,22 +5,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const Services = () => {
   const services = [
     {
-      icon: <Utensils className="h-10 w-10 text-gold-DEFAULT" />,
+      icon: <Utensils className="h-10 w-10 text-gold-light" />,
       title: "Menu Development & Innovation",
       description: "Craft distinctive, profitable menus that balance creativity with market demands and operational capabilities. We analyze food costs, ingredient availability, and culinary trends.",
     },
     {
-      icon: <Award className="h-10 w-10 text-gold-DEFAULT" />,
+      icon: <Award className="h-10 w-10 text-gold-light" />,
       title: "Culinary Team Training",
       description: "Elevate your kitchen team's skills with personalized training programs focusing on technique refinement, consistency, efficiency, and modern culinary approaches.",
     },
     {
-      icon: <Briefcase className="h-10 w-10 text-gold-DEFAULT" />,
+      icon: <Briefcase className="h-10 w-10 text-gold-light" />,
       title: "Operational Excellence",
       description: "Optimize your kitchen workflow, inventory management, and quality control systems to ensure seamless service, reduce waste, and increase profitability.",
     },
     {
-      icon: <Calendar className="h-10 w-10 text-gold-DEFAULT" />,
+      icon: <Calendar className="h-10 w-10 text-gold-light" />,
       title: "Strategic Culinary Planning",
       description: "Develop long-term culinary strategies aligned with your brand vision, market positioning, and business objectives for sustainable growth and reputation building.",
     },

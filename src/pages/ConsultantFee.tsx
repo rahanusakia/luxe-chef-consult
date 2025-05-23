@@ -1,3 +1,4 @@
+
 import { Check, CreditCard, DollarSign, CalendarDays, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
@@ -29,18 +30,18 @@ const ConsultantFee = () => {
             <CardContent className="p-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex flex-col items-center p-6 bg-chef-dark rounded-lg border border-gold-dark/10">
-                  <DollarSign className="h-10 w-10 text-gold-DEFAULT mb-4" strokeWidth={1.5} />
+                  <DollarSign className="h-10 w-10 text-gold-light mb-4" strokeWidth={1.5} />
                   <h3 className="text-xl font-bold mb-2 text-white">Fee</h3>
                   <p className="text-lg font-semibold text-gold-light">Rp 20.000.000</p>
                 </div>
                 <div className="flex flex-col items-center p-6 bg-chef-dark rounded-lg border border-gold-dark/10">
-                  <CalendarDays className="h-10 w-10 text-gold-DEFAULT mb-4" strokeWidth={1.5} />
+                  <CalendarDays className="h-10 w-10 text-gold-light mb-4" strokeWidth={1.5} />
                   <h3 className="text-xl font-bold mb-2 text-white">Duration</h3>
                   <p className="text-lg font-semibold text-white">12 Days</p>
                   <p className="text-sm text-gray-400">(Sunday Off)</p>
                 </div>
                 <div className="flex flex-col items-center p-6 bg-chef-dark rounded-lg border border-gold-dark/10">
-                  <Clock className="h-10 w-10 text-gold-DEFAULT mb-4" strokeWidth={1.5} />
+                  <Clock className="h-10 w-10 text-gold-light mb-4" strokeWidth={1.5} />
                   <h3 className="text-xl font-bold mb-2 text-white">Daily Hours</h3>
                   <p className="text-lg font-semibold text-white">4 Hours</p>
                   <p className="text-sm text-gray-400">2 Food Items Training</p>
@@ -51,7 +52,7 @@ const ConsultantFee = () => {
               <ul className="space-y-3 mb-8">
                 {["20 items of menu/Rp 1.000.000 per item menu (all type of food)", "Training will occur every day during 12 days, with Sundays as days off", "4 hours per day with 2 food items training daily", "Includes meals allowance during training", "For extra day training: Additional charge at Rp 1.000.000/day (4 hours)", "Other Menu / Warranty / Substitution: Depending on the deal site", "If training occurs outside of Bali Area: Extra charges apply for flight tickets (return), accommodation & meals"].map((item, index) => <li key={index} className="flex items-start gap-3 text-white/80">
                     <div className="h-6 w-6 rounded-full bg-gold-DEFAULT/20 flex-shrink-0 flex items-center justify-center mt-0.5">
-                      <Check size={14} className="text-gold-DEFAULT" strokeWidth={2} />
+                      <Check size={14} className="text-gold-light" strokeWidth={2} />
                     </div>
                     <span>{item}</span>
                   </li>)}
@@ -126,7 +127,7 @@ const ConsultantFee = () => {
           </Card>
 
           <div className="flex justify-center">
-            <Link to="/#contact" className="bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark font-medium px-8 py-3 
+            <Link to="/contact" className="bg-gold-light hover:bg-gold-dark text-chef-dark font-medium px-8 py-3 
                         rounded shadow-lg shadow-gold-DEFAULT/20 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
               <CreditCard size={18} className="text-chef-dark" />
               Request Consultation

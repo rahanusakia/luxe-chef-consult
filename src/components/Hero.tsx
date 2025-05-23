@@ -24,7 +24,7 @@ const Hero = () => {
           menu development, and staff training. Experience excellence with LuxeChef Consulting.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in">
-          <Button asChild size="lg" className="bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark font-medium px-8 
+          <Button asChild size="lg" className="bg-gold-light hover:bg-gold-DEFAULT text-chef-dark font-medium px-8 
                                             shadow-lg shadow-gold-DEFAULT/20 transition-all duration-300 transform hover:scale-105">
             <a href="#services">Our Services</a>
           </Button>

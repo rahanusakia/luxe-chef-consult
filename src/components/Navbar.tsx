@@ -51,9 +51,9 @@ const Navbar = () => {
             <Link to="/" className="text-white hover:text-gold-light transition-colors">Home</Link>
           )}
           <Link to="/cv" className="text-white hover:text-gold-light transition-colors">CV</Link>
-          <Link to="/consultant-fee" className="text-white hover:text-gold-light transition-colors">Consultant Fee</Link>
+          <Link to="/consultant-fee" className="text-white hover:text-gold-light transition-colors">Fee</Link>
           <Link to="/contact" className="text-white hover:text-gold-light transition-colors">Contact</Link>
-          <Button asChild variant="outline" className="border-gold-light text-gold-light hover:bg-gold-light hover:text-chef-dark">
+          <Button asChild variant="outline" className="border-gold-light text-gold-light hover:bg-gold-light/20 hover:text-gold-light">
             <Link to="/contact">Get Started</Link>
           </Button>
         </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
           className="md:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} className="text-white" /> : <Menu size={24} className="text-white" />}
+          {mobileMenuOpen ? <X size={24} className="text-gold-light" /> : <Menu size={24} className="text-gold-light" />}
         </button>
       </div>
 
@@ -81,12 +81,12 @@ const Navbar = () => {
               <Link to="/" className="py-2 hover:text-gold-light transition-colors">Home</Link>
             )}
             <Link to="/cv" className="py-2 hover:text-gold-light transition-colors">CV</Link>
-            <Link to="/consultant-fee" className="py-2 hover:text-gold-light transition-colors">Consultant Fee</Link>
+            <Link to="/consultant-fee" className="py-2 hover:text-gold-light transition-colors">Fee</Link>
             <Link to="/contact" className="py-2 hover:text-gold-light transition-colors">Contact</Link>
             <Button 
               asChild 
               variant="outline" 
-              className="border-gold-light text-gold-light hover:bg-gold-light hover:text-chef-dark w-full"
+              className="border-gold-light text-gold-light hover:bg-gold-light/20 w-full"
             >
               <Link to="/contact">Get Started</Link>
             </Button>
