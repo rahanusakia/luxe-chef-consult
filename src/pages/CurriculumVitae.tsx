@@ -77,7 +77,7 @@ const CurriculumVitae = () => {
                     <ChefHat className="h-4 w-4 mr-2" />
                     Skills
                   </TabsTrigger>
-                  <TabsTrigger value="awards" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-chef-dark">
+                  <TabsTrigger value="awards" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-slate-100">
                     <Award className="h-4 w-4 mr-2" />
                     Awards
                   </TabsTrigger>
