@@ -65,7 +65,7 @@ const CurriculumVitae = () => {
             <div className="lg:col-span-2">
               <Tabs defaultValue="experience" className="w-full">
                 <TabsList className="grid grid-cols-4 mb-8 bg-neutral-900">
-                  <TabsTrigger value="experience" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-chef-dark">
+                  <TabsTrigger value="experience" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-slate-100">
                     <Briefcase className="h-4 w-4 mr-2" />
                     Experience
                   </TabsTrigger>
