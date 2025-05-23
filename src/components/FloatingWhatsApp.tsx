@@ -1,5 +1,5 @@
 
-import { Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const FloatingWhatsApp = () => {
@@ -12,15 +12,16 @@ const FloatingWhatsApp = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-8 z-50 shadow-lg rounded-full transition-transform duration-300 hover:scale-110"
+      className="fixed bottom-8 right-8 z-50 transition-transform duration-300 hover:scale-110"
     >
       <Button 
         size="icon" 
-        className="h-14 w-14 rounded-full bg-green-600 hover:bg-green-700 flex items-center justify-center shadow-xl border-2 border-white"
+        className="h-16 w-16 rounded-full bg-chef-dark shadow-xl border-2 border-gold-light hover:bg-chef-darker group"
       >
-        <Phone size={24} className="text-white" />
-        <span className="absolute top-0 right-0 h-3 w-3 bg-red-500 rounded-full animate-ping" />
-        <span className="absolute top-0 right-0 h-3 w-3 bg-red-500 rounded-full" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold-light opacity-20 rounded-full group-hover:opacity-30 transition-opacity"></div>
+        <MessageCircle size={28} className="text-gold-light" />
+        <span className="absolute -top-1 -right-1 h-3 w-3 bg-gold-light rounded-full animate-ping"></span>
+        <span className="absolute -top-1 -right-1 h-3 w-3 bg-gold-light rounded-full"></span>
         <span className="sr-only">Contact via WhatsApp</span>
       </Button>
     </a>
