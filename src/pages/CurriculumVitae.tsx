@@ -69,7 +69,7 @@ const CurriculumVitae = () => {
                     <Briefcase className="h-4 w-4 mr-2" />
                     Experience
                   </TabsTrigger>
-                  <TabsTrigger value="education" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-chef-dark">
+                  <TabsTrigger value="education" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-slate-100">
                     <GraduationCap className="h-4 w-4 mr-2" />
                     Education
                   </TabsTrigger>
