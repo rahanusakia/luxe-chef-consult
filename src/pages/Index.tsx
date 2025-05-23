@@ -9,6 +9,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Skills from '@/components/Skills';
 
+// The Index page is an exception as it has a unique layout with the hero section
 const Index = () => {
   return (
     <div className="min-h-screen bg-chef-light">

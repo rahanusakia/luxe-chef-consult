@@ -1,451 +1,401 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ChefHat, Calendar, Award, School, Briefcase, Phone, Mail, MapPin, Link, ClipboardList, ArrowRight } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
+import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import { Briefcase, GraduationCap, Award, Star, Languages, ChefHat } from "lucide-react";
 
 const CurriculumVitae = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("kitchen");
-  
-  const dutyCategories = {
-    kitchen: [
-      "Responsible for the operational management of the kitchen.",
-      "Making sure that all health and safety requirements are met.",
-      "In charge of the cooking, preparation and serving of meals and refreshments.",
-      "Keeping the kitchen organized, ensuring utensils are placed in the correct place.",
-      "Ensuring the kitchen is a safe environment to work in.",
-      "Advising new cooking techniques and equipment to kitchen staff.",
-      "Carry out the preparatory work for creating dishes.",
-      "Cooking, breakfast, lunch and evening meals"
-    ],
-    food: [
-      "Checking food items on delivery and tidy them into cold storage.",
-      "Prepare and present dishes so they are ready for guests at the right time.",
-      "Ensure all the food produced is of the very highest standard and delicious.",
-      "Serving classic French food and modern European cuisine.",
-      "Responsible for food stock control, ordering high quality vegetables and meat.",
-      "Preparing food for both public visitors and private event guests i.e. weddings etc.",
-      "Introducing & developing new dishes & measuring consistency and performance.",
-      "Meal preparation and menu planning.",
-      "Ensuring the kitchen is maintained and cleaned to the highest level."
-    ]
-  };
-
   return (
-    <div className="bg-chef-dark min-h-screen">
-      <Navbar />
+    <PageLayout>
+      <PageHeader
+        title="Curriculum Vitae"
+        backgroundImage="/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "CV", href: "/cv", isCurrent: true }
+        ]}
+      />
       
-      {/* Page Header - Added to match other pages */}
-      <div 
-        className="relative bg-cover bg-center py-28" 
-        style={{ backgroundImage: 'url("/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png")' }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/95 to-chef-darker/90"></div>
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Curriculum <span className="text-gold-light">Vitae</span>
-          </h1>
-          <div className="flex items-center justify-center text-sm md:text-base text-white/80 space-x-2">
-            <Link to="/" className="hover:text-gold-light transition-colors">Home</Link>
-            <ArrowRight size={14} className="text-gold-light" />
-            <span className="text-gold-light">Curriculum Vitae</span>
-          </div>
-        </div>
-      </div>
-      
-      <div className="pt-12 pb-16">
-        <div className="container mx-auto px-6">
-          {/* Header - Modified to reduce vertical space since we have the page header now */}
-          <div className="text-center mb-12">
-            <div className="flex justify-center items-center mb-6 animate-fade-in">
-              <div className="h-16 w-16 rounded-full bg-gold-dark/40 flex items-center justify-center">
-                <ChefHat className="h-8 w-8 text-gold-light" />
-              </div>
-            </div>
-            <p className="text-xl text-gold-light font-playfair italic mb-4 max-w-3xl mx-auto animate-fade-in">
-              The Professional Journey of David Cailleba
-            </p>
-            <div className="h-1 w-24 bg-gold-DEFAULT mx-auto"></div>
-          </div>
-
-          {/* Profile Overview */}
-          <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 md:p-10 mb-12 backdrop-blur-sm animate-fade-in">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-1 flex justify-center">
-                <div className="rounded-full overflow-hidden border-4 border-gold-DEFAULT/50 shadow-lg shadow-gold-DEFAULT/20 h-56 w-56">
-                  <img 
-                    src="/lovable-uploads/b756b57d-9265-4f42-8c36-eb308c72a6d1.png" 
-                    alt="David Cailleba" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="md:col-span-2 text-white">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gold-light font-playfair">David Claude Cailleba</h2>
-                <p className="text-xl mb-4 italic text-white/90">Executive Chef Consultant</p>
-                <div className="mb-6 space-y-3 text-white/80">
-                  <p>
-                    With 28+ years of professional Executive Chef experience, I offer my expertise as an Executive Chef / 
-                    Consultant Chef for hotels, resorts, and free-standing restaurant businesses.
-                  </p>
-                  <p>
-                    If you're looking to improve overall performance, increase revenues with lower costs, and build a professionally 
-                    trained, highly motivated workforce, you should contact me immediately.
-                  </p>
-                  <p>
-                    As an Executive Chef specialist with proven capabilities of turning businesses around, I can help with quality 
-                    assurance, staff training and development, HACCP implementation, and equipment planning.
-                  </p>
-                </div>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center gap-3">
-                    <MapPin className="h-5 w-5 text-gold-light" />
-                    <span className="text-white/80">Jalan Gunung Wayang Bale residence no.19, Kerobokan Denpasar Bali</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 text-gold-light" />
-                    <span className="text-white/80">(+62) 82273507458</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 text-gold-light" />
-                    <span className="text-white/80">davidcailleba4@gmail.com</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Link className="h-5 w-5 text-gold-light" />
-                    <span className="text-white/80">www.konsultanchef.com</span>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-4 mt-4">
-                  <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                    French Cuisine
-                  </span>
-                  <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                    Italian Cuisine
-                  </span>
-                  <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                    Spanish Cuisine
-                  </span>
-                  <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                    Asian Cuisine
-                  </span>
-                  <span className="px-4 py-2 bg-gold-DEFAULT/20 border border-gold-light/30 rounded-full text-gold-light text-sm">
-                    Staff Training
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Personal Info Card */}
-          <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 mb-8 backdrop-blur-sm animate-fade-in">
-            <div className="flex items-center mb-4">
-              <div className="h-10 w-10 rounded-full bg-gold-dark/30 flex items-center justify-center mr-4">
-                <ChefHat className="h-5 w-5 text-gold-light" />
-              </div>
-              <h2 className="text-2xl font-bold text-white">Personal Information</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <p><span className="text-gold-light">Date of Birth:</span> <span className="text-white/80">September 4th, 1970</span></p>
-                <p><span className="text-gold-light">Place of Birth:</span> <span className="text-white/80">Bayonne, France</span></p>
-              </div>
-              <div className="space-y-2">
-                <p><span className="text-gold-light">Nationality:</span> <span className="text-white/80">France</span></p>
-                <p><span className="text-gold-light">Languages:</span> <span className="text-white/80">French, English, Indonesian Bahasa</span></p>
-              </div>
-            </div>
-          </div>
-          
-          {/* CV Content */}
+      <section className="py-20 container mx-auto px-6">
+        <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            {/* Left Column */}
-            <div className="lg:col-span-2 space-y-8">
-              {/* Work Experience */}
-              <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-                <div className="flex items-center mb-6">
-                  <Briefcase className="h-6 w-6 text-gold-light mr-3" />
-                  <h2 className="text-2xl font-bold text-white">Professional Experience</h2>
-                </div>
-                <ScrollArea className="h-[500px] rounded-md pr-4">
-                  <div className="space-y-8">
-                    <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                      <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                      <h3 className="text-gold-light font-bold text-lg">Executive Chef</h3>
-                      <p className="text-white/90 mb-1">La Toc St Lucia (Caribbean island group Sandal's)</p>
-                      <p className="text-white/70 flex items-center gap-2 mb-2">
-                        <Calendar className="h-4 w-4" /> December 2022 - Present
-                      </p>
-                      <ul className="text-white/80 list-disc ml-5 space-y-2">
-                        <li>In charge of 9 outlets restaurant and 300 rooms (All-inclusive hotel)</li>
-                        <li>Managing and controlling all kitchen operations</li>
-                        <li>Overseeing training programs for all F&B staff</li>
-                        <li>Creating new food concepts and maintaining food cost control</li>
-                        <li>Maintaining standard cooking methods for all recipes</li>
-                        <li>Creating new menu designs, concepts, and implementation</li>
-                        <li>Supporting General Manager on new projects for the property</li>
-                      </ul>
-                    </div>
-                    
-                    <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                      <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                      <h3 className="text-gold-light font-bold text-lg">Consultant Chef International</h3>
-                      <p className="text-white/90 mb-1">French, Italian, Spanish, and Asian Cuisine</p>
-                      <p className="text-white/90 mb-1">Radisson Hotel, Bali Handara Golf and Resorts, Babochkaa Restaurant Jakarta</p>
-                      <p className="text-white/70 flex items-center gap-2 mb-2">
-                        <Calendar className="h-4 w-4" /> May 2018 - December 2022
-                      </p>
-                      <ul className="text-white/80 list-disc ml-5 space-y-2">
-                        <li>Maximized productivity of kitchen staff across overall operations</li>
-                        <li>Maintained food cost at an average of 31%</li>
-                        <li>Created new menus for restaurant and banquet operations</li>
-                        <li>Maintained high work, hygiene, and safety standards</li>
-                        <li>Tracked kitchen expenses and reported to owners</li>
-                        <li>Responsible for kitchen staffing</li>
-                        <li>Assisted in creation and quality of food</li>
-                      </ul>
-                    </div>
-                    
-                    <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                      <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                      <h3 className="text-gold-light font-bold text-lg">Executive Chef</h3>
-                      <p className="text-white/90 mb-1">Patra Jasa Hotel (5 Star Resort, 228 Rooms, 4 Outlets)</p>
-                      <p className="text-white/70 flex items-center gap-2 mb-2">
-                        <Calendar className="h-4 w-4" /> May 2017 - May 2018
-                      </p>
-                      <ul className="text-white/80 list-disc ml-5 space-y-2">
-                        <li>Managed and controlled a kitchen team of 47 staff members</li>
-                        <li>Oversaw training programs for all F&B staff</li>
-                        <li>Maintained food cost at an average of 33%</li>
-                        <li>Created new menu designs, concepts and implemented them</li>
-                        <li>Supported General Manager on new projects</li>
-                        <li>Maintained proper hygiene standards and up-to-date files for audit inspections</li>
-                      </ul>
-                    </div>
-                    
-                    <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                      <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                      <h3 className="text-gold-light font-bold text-lg">Executive Chef</h3>
-                      <p className="text-white/90 mb-1">The Seminyak Beach & Resort and Spa, Bali (5 Star Hotel, 108 Suites, 2 Outlets)</p>
-                      <p className="text-white/70 flex items-center gap-2 mb-2">
-                        <Calendar className="h-4 w-4" /> April 2015 - April 2017
-                      </p>
-                      <ul className="text-white/80 list-disc ml-5 space-y-2">
-                        <li>Maintained complete control of the kitchen and commanded staff respect</li>
-                        <li>Managed the Head Chef, Sous Chef and Chef de Partie</li>
-                        <li>Maintained a food cost average of 28%</li>
-                        <li>Approved all prepared food items and created new menu items</li>
-                        <li>Performed administrative duties including ordering and reporting</li>
-                        <li>Responsible for kitchen staffing and maintaining high safety standards</li>
-                      </ul>
-                    </div>
-                    
-                    <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                      <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                      <h3 className="text-gold-light font-bold text-lg">Executive Chef</h3>
-                      <p className="text-white/90 mb-1">The Meridien Hotel managed by Starwood (118 Rooms & 2 outlets)</p>
-                      <p className="text-white/70 flex items-center gap-2 mb-2">
-                        <Calendar className="h-4 w-4" /> February 2014 - February 2015
-                      </p>
-                      <ul className="text-white/80 list-disc ml-5 space-y-2">
-                        <li>Planned menus for all food outlets</li>
-                        <li>Scheduled and coordinated work of chefs and kitchen staff</li>
-                        <li>Maintained high standards of sanitation and safety</li>
-                        <li>Established controls to minimize food waste and theft</li>
-                        <li>Developed standard recipes and techniques for quality food preparation</li>
-                        <li>Maintained a food cost average of 31%</li>
-                        <li>Prepared data for budgets and monitored financial results</li>
-                      </ul>
-                    </div>
-                    
-                    <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                      <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-2"></div>
-                      <h3 className="text-gold-light font-bold text-lg">Chef de Cuisine</h3>
-                      <p className="text-white/90 mb-1">Sogeres Company (operator Alain Ducasse) (France St. Jean de Luz)</p>
-                      <p className="text-white/70 flex items-center gap-2 mb-2">
-                        <Calendar className="h-4 w-4" /> January 2013 - January 2014
-                      </p>
-                      <ul className="text-white/80 list-disc ml-5 space-y-2">
-                        <li>Responsible for main kitchen operations</li>
-                        <li>Developed kitchen brigade of 65 staff members</li>
-                        <li>Maintained food cost at company standards</li>
-                        <li>Improved food quality, hygiene and sanitation</li>
-                        <li>Assisted purchasing department to find optimal products</li>
-                      </ul>
-                    </div>
+            <div className="lg:col-span-1">
+              <div className="sticky top-24">
+                <Card className="overflow-hidden border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/447d23ff-3be3-4464-b6ff-811dd4f764d6.png" 
+                      alt="Chef David Cailleba" 
+                      className="object-cover w-full h-full"
+                    />
                   </div>
-                </ScrollArea>
-              </div>
-              
-              {/* Duties & Responsibilities Section - NEW SECTION */}
-              <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-                <div className="flex items-center mb-6">
-                  <ClipboardList className="h-6 w-6 text-gold-light mr-3" />
-                  <h2 className="text-2xl font-bold text-white">Duties & Responsibilities</h2>
-                </div>
-                
-                <div className="flex gap-4 mb-6">
-                  <Button 
-                    variant={activeCategory === "kitchen" ? "default" : "outline"}
-                    onClick={() => setActiveCategory("kitchen")}
-                    className={`${activeCategory === "kitchen" ? "bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark" : "bg-transparent text-gold-light border-gold-light/30 hover:bg-gold-DEFAULT/10"}`}
-                  >
-                    Kitchen Management
-                  </Button>
-                  <Button 
-                    variant={activeCategory === "food" ? "default" : "outline"}
-                    onClick={() => setActiveCategory("food")}
-                    className={`${activeCategory === "food" ? "bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark" : "bg-transparent text-gold-light border-gold-light/30 hover:bg-gold-DEFAULT/10"}`}
-                  >
-                    Food Preparation & Quality
-                  </Button>
-                </div>
-                
-                <Card className="bg-chef-dark/50 border-gold-dark/30 shadow-lg shadow-gold-DEFAULT/5">
                   <CardContent className="p-6">
-                    <div className="grid grid-cols-1 gap-4">
-                      {dutyCategories[activeCategory as keyof typeof dutyCategories].map((duty, index) => (
-                        <div key={index} className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
-                          <div className="h-6 w-6 rounded-full bg-gold-DEFAULT/20 border border-gold-DEFAULT/40 flex-shrink-0 flex items-center justify-center mt-0.5">
-                            <span className="text-gold-light text-xs font-bold">{index + 1}</span>
-                          </div>
-                          <p className="text-white/80">{duty}</p>
+                    <h2 className="text-2xl font-bold text-white mb-2">David Cailleba</h2>
+                    <p className="text-gold-light font-medium mb-4">Executive Chef Consultant</p>
+                    
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="text-sm uppercase tracking-wider text-white/60 mb-2">Contact</h3>
+                        <div className="text-white/80 space-y-1 text-sm">
+                          <p>Email: davidcailleba4@gmail.com</p>
+                          <p>Phone: +62 822-7350-7458</p>
+                          <p>Location: Bali, Indonesia</p>
                         </div>
-                      ))}
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-sm uppercase tracking-wider text-white/60 mb-2">Languages</h3>
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="outline" className="bg-gold-DEFAULT/10 text-gold-light border-gold-DEFAULT/30">English</Badge>
+                          <Badge variant="outline" className="bg-gold-DEFAULT/10 text-gold-light border-gold-DEFAULT/30">French</Badge>
+                          <Badge variant="outline" className="bg-gold-DEFAULT/10 text-gold-light border-gold-DEFAULT/30">Indonesian</Badge>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-sm uppercase tracking-wider text-white/60 mb-2">Expertise</h3>
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="outline" className="bg-gold-DEFAULT/10 text-gold-light border-gold-DEFAULT/30">Fine Dining</Badge>
+                          <Badge variant="outline" className="bg-gold-DEFAULT/10 text-gold-light border-gold-DEFAULT/30">French Cuisine</Badge>
+                          <Badge variant="outline" className="bg-gold-DEFAULT/10 text-gold-light border-gold-DEFAULT/30">Menu Development</Badge>
+                          <Badge variant="outline" className="bg-gold-DEFAULT/10 text-gold-light border-gold-DEFAULT/30">Staff Training</Badge>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
             
-            {/* Right Column */}
-            <div className="lg:col-span-1 space-y-8">
-              {/* Education */}
-              <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-                <div className="flex items-center mb-6">
-                  <School className="h-6 w-6 text-gold-light mr-3" />
-                  <h2 className="text-2xl font-bold text-white">Education</h2>
-                </div>
-                <div className="space-y-6">
-                  <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                    <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-1"></div>
-                    <h3 className="text-gold-light font-bold">Level Diploma in Professional Cookery</h3>
-                    <p className="text-white/70 flex items-center gap-2">
-                      <Calendar className="h-4 w-4" /> 1989 - 1992
-                    </p>
-                    <p className="text-white/80">Chambres des métiers Bayonne</p>
-                  </div>
-                  
-                  <div className="border-l-2 border-gold-DEFAULT pl-6 relative">
-                    <div className="absolute w-3 h-3 bg-gold-DEFAULT rounded-full -left-[7px] top-1"></div>
-                    <h3 className="text-gold-light font-bold">Apprenticeship with contract</h3>
-                    <p className="text-white/70">Plumauzille Catering, Anglet France</p>
-                    <p className="text-white/70 flex items-center gap-2">
-                      <Calendar className="h-4 w-4" /> 1989 - 1992
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Awards */}
-              <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-                <div className="flex items-center mb-6">
-                  <Award className="h-6 w-6 text-gold-light mr-3" />
-                  <h2 className="text-2xl font-bold text-white">Skills & Expertise</h2>
-                </div>
-                <div className="space-y-4">
-                  <Card className="bg-chef-dark border-gold-dark/30">
-                    <CardContent className="p-4">
-                      <h4 className="text-gold-light font-semibold mb-2">Culinary Expertise</h4>
-                      <ul className="text-white/80 list-disc ml-5 space-y-1">
-                        <li>French Cuisine</li>
-                        <li>Italian Cuisine</li>
-                        <li>Spanish Cuisine</li>
-                        <li>Asian Cuisine</li>
-                        <li>Pastry Basics</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-chef-dark border-gold-dark/30">
-                    <CardContent className="p-4">
-                      <h4 className="text-gold-light font-semibold mb-2">Management</h4>
-                      <ul className="text-white/80 list-disc ml-5 space-y-1">
-                        <li>Kitchen Operations</li>
-                        <li>Staff Training</li>
-                        <li>Quality Assurance</li>
-                        <li>HACCP Implementation</li>
-                        <li>Food Cost Control</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-chef-dark border-gold-dark/30">
-                    <CardContent className="p-4">
-                      <h4 className="text-gold-light font-semibold mb-2">Languages</h4>
-                      <ul className="text-white/80 list-disc ml-5 space-y-1">
-                        <li>French (Native)</li>
-                        <li>English (Fluent)</li>
-                        <li>Indonesian Bahasa (Proficient)</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-              
-              {/* References */}
-              <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-                <h2 className="text-2xl font-bold text-white mb-6">Professional References</h2>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-gold-light font-bold">Bali Handara Golf</p>
-                    <p className="text-white/80">Owner</p>
-                    <p className="text-white/70">Mobile: +628118114555</p>
-                    <p className="text-white/70">Email: Salviandra@gmail.com</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-gold-light font-bold">Patra Jasa Hotel</p>
-                    <p className="text-white/80">Askar Daeng Kamis (General Manager)</p>
-                    <p className="text-white/70">Mobile: +6281803614636</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-gold-light font-bold">The Seminyak Beach and Resorts and Spa</p>
-                    <p className="text-white/80">Mister Jos (Owner)</p>
-                    <p className="text-white/70">Mobile: +62816507737</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-gold-light font-bold">Bali Mandira Hotel</p>
-                    <p className="text-white/80">Pak Agus Pribadi (Owner)</p>
-                    <p className="text-white/70">Mobile: +628123842021</p>
-                  </div>
-                </div>
+            <div className="lg:col-span-2">
+              <Tabs defaultValue="experience" className="w-full">
+                <TabsList className="grid grid-cols-4 mb-8">
+                  <TabsTrigger value="experience" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-chef-dark">
+                    <Briefcase className="h-4 w-4 mr-2" />
+                    Experience
+                  </TabsTrigger>
+                  <TabsTrigger value="education" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-chef-dark">
+                    <GraduationCap className="h-4 w-4 mr-2" />
+                    Education
+                  </TabsTrigger>
+                  <TabsTrigger value="skills" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-chef-dark">
+                    <ChefHat className="h-4 w-4 mr-2" />
+                    Skills
+                  </TabsTrigger>
+                  <TabsTrigger value="awards" className="data-[state=active]:bg-gold-DEFAULT data-[state=active]:text-chef-dark">
+                    <Award className="h-4 w-4 mr-2" />
+                    Awards
+                  </TabsTrigger>
+                </TabsList>
                 
-                <div className="mt-6 text-center">
-                  <p className="text-white/80 italic">Additional references available upon request</p>
-                </div>
-              </div>
-              
-              <div className="bg-chef-darker/80 border border-gold-dark/30 rounded-xl p-6 backdrop-blur-sm animate-fade-in">
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-white mb-4">Ready to elevate your culinary business?</h3>
-                  <Button asChild size="lg" className="bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark font-medium px-8 
-                                                  shadow-lg shadow-gold-DEFAULT/20 transition-all duration-300 transform hover:scale-105">
-                    <a href="/#contact">Contact David Cailleba</a>
-                  </Button>
-                </div>
-              </div>
+                <TabsContent value="experience" className="space-y-8">
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-bold text-white">Executive Chef Consultant</h3>
+                        <Badge className="bg-gold-DEFAULT text-chef-dark">2018 - Present</Badge>
+                      </div>
+                      <p className="text-gold-light mb-4">LuxeChef Consultancy, Bali, Indonesia</p>
+                      <p className="text-white/80 mb-4">
+                        Providing expert culinary consultation to high-end restaurants, hotels, and resorts across Southeast Asia. 
+                        Specializing in menu development, kitchen operations optimization, and staff training.
+                      </p>
+                      <ul className="list-disc list-inside text-white/80 space-y-1">
+                        <li>Developed over 200 signature dishes for various establishments</li>
+                        <li>Trained more than 50 kitchen teams in fine dining techniques</li>
+                        <li>Implemented efficient kitchen workflows reducing operational costs by 25%</li>
+                        <li>Consulted for 15+ Michelin-standard restaurants</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-bold text-white">Head Chef</h3>
+                        <Badge className="bg-gold-DEFAULT text-chef-dark">2012 - 2018</Badge>
+                      </div>
+                      <p className="text-gold-light mb-4">Le Petit Jardin, Paris, France</p>
+                      <p className="text-white/80 mb-4">
+                        Led a team of 15 chefs at this renowned 2-Michelin star restaurant, overseeing all culinary operations
+                        and menu development.
+                      </p>
+                      <ul className="list-disc list-inside text-white/80 space-y-1">
+                        <li>Maintained 2 Michelin stars for 6 consecutive years</li>
+                        <li>Created seasonal tasting menus featuring innovative French cuisine</li>
+                        <li>Mentored 8 sous chefs who went on to lead their own Michelin-starred kitchens</li>
+                        <li>Increased restaurant revenue by 40% through menu innovation</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-bold text-white">Sous Chef</h3>
+                        <Badge className="bg-gold-DEFAULT text-chef-dark">2008 - 2012</Badge>
+                      </div>
+                      <p className="text-gold-light mb-4">L'Atelier de Joël Robuchon, London, UK</p>
+                      <p className="text-white/80 mb-4">
+                        Worked directly under Joël Robuchon in this 3-Michelin star establishment, focusing on
+                        precision cooking and innovative techniques.
+                      </p>
+                      <ul className="list-disc list-inside text-white/80 space-y-1">
+                        <li>Assisted in maintaining the restaurant's 3 Michelin stars</li>
+                        <li>Specialized in sauce preparation and meat cookery</li>
+                        <li>Trained junior chefs in classic French techniques</li>
+                        <li>Contributed to the development of 30+ signature dishes</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+                
+                <TabsContent value="education" className="space-y-8">
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-bold text-white">Advanced Culinary Arts Diploma</h3>
+                        <Badge className="bg-gold-DEFAULT text-chef-dark">2006 - 2008</Badge>
+                      </div>
+                      <p className="text-gold-light mb-4">Le Cordon Bleu, Paris, France</p>
+                      <p className="text-white/80">
+                        Completed the prestigious Grand Diplôme, mastering both cuisine and pâtisserie with highest honors.
+                        Specialized in classical French techniques and modern culinary innovations.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-bold text-white">Culinary Management</h3>
+                        <Badge className="bg-gold-DEFAULT text-chef-dark">2004 - 2006</Badge>
+                      </div>
+                      <p className="text-gold-light mb-4">École Supérieure de Cuisine Française, Paris, France</p>
+                      <p className="text-white/80">
+                        Studied restaurant management, food costing, menu planning, and kitchen operations.
+                        Graduated with distinction and received the Excellence in Leadership award.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+                
+                <TabsContent value="skills" className="space-y-8">
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold text-white mb-6">Culinary Expertise</h3>
+                      
+                      <div className="space-y-4">
+                        <div>
+                          <div className="flex justify-between mb-1">
+                            <span className="text-white">French Cuisine</span>
+                            <span className="text-gold-light">Expert</span>
+                          </div>
+                          <div className="h-2 bg-chef-dark rounded-full">
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '95%' }}></div>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <div className="flex justify-between mb-1">
+                            <span className="text-white">Menu Development</span>
+                            <span className="text-gold-light">Expert</span>
+                          </div>
+                          <div className="h-2 bg-chef-dark rounded-full">
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '90%' }}></div>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <div className="flex justify-between mb-1">
+                            <span className="text-white">Kitchen Management</span>
+                            <span className="text-gold-light">Expert</span>
+                          </div>
+                          <div className="h-2 bg-chef-dark rounded-full">
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '95%' }}></div>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <div className="flex justify-between mb-1">
+                            <span className="text-white">Staff Training</span>
+                            <span className="text-gold-light">Expert</span>
+                          </div>
+                          <div className="h-2 bg-chef-dark rounded-full">
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '90%' }}></div>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <div className="flex justify-between mb-1">
+                            <span className="text-white">Asian Fusion</span>
+                            <span className="text-gold-light">Advanced</span>
+                          </div>
+                          <div className="h-2 bg-chef-dark rounded-full">
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '85%' }}></div>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <div className="flex justify-between mb-1">
+                            <span className="text-white">Molecular Gastronomy</span>
+                            <span className="text-gold-light">Advanced</span>
+                          </div>
+                          <div className="h-2 bg-chef-dark rounded-full">
+                            <div className="h-2 bg-gold-DEFAULT rounded-full" style={{ width: '80%' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold text-white mb-6">Professional Skills</h3>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <span className="text-white">Team Leadership</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <span className="text-white">Cost Control</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <span className="text-white">Inventory Management</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <span className="text-white">Food Safety & HACCP</span>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <span className="text-white">Menu Engineering</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <span className="text-white">Supplier Negotiations</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <span className="text-white">Restaurant Consulting</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <span className="text-white">Culinary Innovation</span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+                
+                <TabsContent value="awards" className="space-y-8">
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold text-white mb-6">Awards & Recognition</h3>
+                      
+                      <div className="space-y-6">
+                        <div className="flex gap-4">
+                          <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
+                            <Award className="h-6 w-6 text-gold-DEFAULT" />
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold text-white">Best Chef of the Year</h4>
+                            <p className="text-gold-light">Southeast Asia Culinary Association, 2020</p>
+                            <p className="text-white/70 mt-1">
+                              Recognized for outstanding contribution to the culinary arts and innovation in Southeast Asian fine dining.
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex gap-4">
+                          <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
+                            <Award className="h-6 w-6 text-gold-DEFAULT" />
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold text-white">Michelin Star Maintenance</h4>
+                            <p className="text-gold-light">Le Petit Jardin, 2012-2018</p>
+                            <p className="text-white/70 mt-1">
+                              Successfully maintained 2 Michelin stars for six consecutive years as Head Chef.
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex gap-4">
+                          <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
+                            <Award className="h-6 w-6 text-gold-DEFAULT" />
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold text-white">Culinary Innovation Award</h4>
+                            <p className="text-gold-light">International Chefs Association, 2016</p>
+                            <p className="text-white/70 mt-1">
+                              Awarded for pioneering fusion techniques combining French and Southeast Asian flavors.
+                            </p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex gap-4">
+                          <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
+                            <Award className="h-6 w-6 text-gold-DEFAULT" />
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold text-white">Excellence in Mentorship</h4>
+                            <p className="text-gold-light">Global Culinary Academy, 2019</p>
+                            <p className="text-white/70 mt-1">
+                              Recognized for exceptional commitment to training the next generation of culinary professionals.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="border-gold-dark/20 bg-chef-darker/80 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold text-white mb-6">Publications & Features</h3>
+                      
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="text-lg font-semibold text-white">The Art of French Fusion</h4>
+                          <p className="text-gold-light">Culinary Press, 2019</p>
+                          <p className="text-white/70 mt-1">
+                            Authored cookbook featuring 120 signature recipes blending French techniques with Asian ingredients.
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-lg font-semibold text-white">Featured Chef</h4>
+                          <p className="text-gold-light">Gourmet Magazine, 2017-2021</p>
+                          <p className="text-white/70 mt-1">
+                            Regular contributor with a quarterly column on fine dining innovations and techniques.
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-lg font-semibold text-white">Culinary Masters</h4>
+                          <p className="text-gold-light">Netflix Documentary Series, 2020</p>
+                          <p className="text-white/70 mt-1">
+                            Featured in episode highlighting revolutionary chefs transforming the Asian fine dining scene.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              </Tabs>
             </div>
           </div>
         </div>
-      </div>
-      
-      <Footer />
-    </div>
+      </section>
+    </PageLayout>
   );
 };
 

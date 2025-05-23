@@ -1,31 +1,22 @@
-
-import { ArrowRight, Check, CreditCard, DollarSign, CalendarDays, Clock } from "lucide-react";
+import { Check, CreditCard, DollarSign, CalendarDays, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Link } from "react-router-dom";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-const ConsultantFee = () => {
-  return <div className="min-h-screen bg-chef-dark">
-      <Navbar />
-      
-      {/* Page Header */}
-      <div className="relative bg-cover bg-center py-28" style={{
-      backgroundImage: 'url("/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png")'
-    }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/95 to-chef-darker/90"></div>
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Consultant <span className="text-gold-light">Fee</span>
-          </h1>
-          <div className="flex items-center justify-center text-sm md:text-base text-white/80 space-x-2">
-            <Link to="/" className="hover:text-gold-light transition-colors">Home</Link>
-            <ArrowRight size={14} className="text-gold-light" />
-            <span className="text-gold-light">Consultant Fee</span>
-          </div>
-        </div>
-      </div>
+import PageHeader from "@/components/PageHeader";
+import PageLayout from "@/components/PageLayout";
 
+const ConsultantFee = () => {
+  return (
+    <PageLayout>
+      <PageHeader
+        title="Consultant Fee"
+        backgroundImage="/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Consultant Fee", href: "/consultant-fee", isCurrent: true }
+        ]}
+      />
+      
       <section className="py-20 container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Fee Details Card */}
@@ -143,8 +134,8 @@ const ConsultantFee = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>;
+    </PageLayout>
+  );
 };
+
 export default ConsultantFee;
