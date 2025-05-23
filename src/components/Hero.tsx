@@ -1,15 +1,12 @@
-
 import { Button } from '@/components/ui/button';
 import { ChefHat } from 'lucide-react';
-
 const Hero = () => {
   const phoneNumber = "+6282273507458";
   const message = "Hello, I'd like to schedule a consultation for your chef services";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-  return (
-    <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed" 
-         style={{ backgroundImage: 'url("/lovable-uploads/447d23ff-3be3-4464-b6ff-811dd4f764d6.png")' }} id="home">
+  return <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed" style={{
+    backgroundImage: 'url("/lovable-uploads/447d23ff-3be3-4464-b6ff-811dd4f764d6.png")'
+  }} id="home">
       <div className="absolute inset-0 bg-gradient-to-b from-chef-darker/95 to-chef-darker/90"></div>
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="flex justify-center items-center mb-6 animate-fade-in">
@@ -34,12 +31,10 @@ const Hero = () => {
           </Button>
           <Button asChild variant="outline" size="lg" className="border-gold-light text-gold-light bg-chef-dark/80 hover:bg-chef-dark 
                                                               shadow-lg shadow-gold-light/10 transition-all duration-300 transform hover:scale-105">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-chef-dark hover:bg-chef-darker text-slate-100 border border-gold-dark/30 font-semibold">Schedule a Consultation</a>
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;
