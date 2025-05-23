@@ -156,7 +156,7 @@ const Contact = () => {
                 <Textarea id="message" name="message" value={formData.message} onChange={handleChange} className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light min-h-[120px]" required />
               </div>
 
-              <Button type="submit" className="w-full bg-chef-dark hover:bg-chef-darker text-gold-light border border-zinc-800 font-semibold">
+              <Button type="submit" className="w-full bg-chef-dark hover:bg-chef-darker text-gold-light border border-zinc-700 font-semibold">
                 Submit Inquiry <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>
