@@ -4,25 +4,30 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     business: '',
-    message: '',
+    message: ''
   });
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Prepare WhatsApp message
     const phoneNumber = "+6282273507458";
     let message = `Hello, my name is ${formData.name}.\n`;
@@ -30,29 +35,27 @@ const Contact = () => {
     if (formData.email) message += `Email: ${formData.email}\n`;
     if (formData.phone) message += `Phone: ${formData.phone}\n`;
     message += `\nMessage: ${formData.message}`;
-    
+
     // Show success toast
     toast({
       title: "Inquiry Received",
-      description: "Redirecting you to WhatsApp to complete your inquiry.",
+      description: "Redirecting you to WhatsApp to complete your inquiry."
     });
-    
+
     // Open WhatsApp with the message
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-    
+
     // Reset form
     setFormData({
       name: '',
       email: '',
       phone: '',
       business: '',
-      message: '',
+      message: ''
     });
   };
-
-  return (
-    <section id="contact" className="bg-chef-darker py-24">
+  return <section id="contact" className="bg-chef-darker py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 gold-underline">Contact Us</h2>
@@ -121,28 +124,13 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                     Full Name
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light"
-                    required
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light" required />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                     Email Address
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light"
-                    required
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light" required />
                 </div>
               </div>
 
@@ -151,25 +139,13 @@ const Contact = () => {
                   <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
                     Phone Number
                   </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light"
-                  />
+                  <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light" />
                 </div>
                 <div>
                   <label htmlFor="business" className="block text-sm font-medium text-white mb-2">
                     Business Name
                   </label>
-                  <Input
-                    id="business"
-                    name="business"
-                    value={formData.business}
-                    onChange={handleChange}
-                    className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light"
-                  />
+                  <Input id="business" name="business" value={formData.business} onChange={handleChange} className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light" />
                 </div>
               </div>
 
@@ -177,25 +153,16 @@ const Contact = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                   How can we help?
                 </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light min-h-[120px]"
-                  required
-                />
+                <Textarea id="message" name="message" value={formData.message} onChange={handleChange} className="border-white/10 bg-chef-darker focus:border-gold-DEFAULT focus:ring-gold-light min-h-[120px]" required />
               </div>
 
-              <Button type="submit" className="w-full bg-chef-dark hover:bg-chef-darker text-gold-light font-semibold border border-gold-light">
+              <Button type="submit" className="w-full bg-chef-dark hover:bg-chef-darker text-gold-light border border-slate-100 font-semibold">
                 Submit Inquiry <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
