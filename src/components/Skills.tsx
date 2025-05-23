@@ -33,7 +33,7 @@ const Skills = () => {
       {/* Decorative background element */}
       <div style={{
       backgroundImage: 'url("/lovable-uploads/6fa56379-4b02-4aca-92d4-3c1bdceec894.png")'
-    }} className="absolute inset-0 bg-cover bg-center opacity-35 z-0"></div>
+    }} className="absolute inset-0 bg-cover bg-center opacity-15 z-0"></div>
     </section>;
 };
 export default Skills;
