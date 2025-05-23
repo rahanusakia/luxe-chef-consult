@@ -8,6 +8,7 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Skills from '@/components/Skills';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 // The Index page is an exception as it has a unique layout with the hero section
 const Index = () => {
@@ -22,6 +23,7 @@ const Index = () => {
       <Testimonials />
       <Contact />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };

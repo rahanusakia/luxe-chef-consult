@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CurriculumVitae from "./pages/CurriculumVitae";
@@ -22,8 +22,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/cv" element={<CurriculumVitae />} />
           <Route path="/fee" element={<ConsultantFee />} />
-          {/* Kept for backward compatibility but will redirect to /fee */}
-          <Route path="/consultant-fee" element={<ConsultantFee />} />
+          {/* Redirect from old path to new path */}
+          <Route path="/consultant-fee" element={<Navigate to="/fee" replace />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

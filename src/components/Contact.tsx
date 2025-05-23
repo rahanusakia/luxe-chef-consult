@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,14 +22,24 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here would typically be the API call to send the form
-    console.log('Form submitted:', formData);
+    
+    // Prepare WhatsApp message
+    const phoneNumber = "+6282273507458";
+    let message = `Hello, my name is ${formData.name}.\n`;
+    if (formData.business) message += `Business: ${formData.business}\n`;
+    if (formData.email) message += `Email: ${formData.email}\n`;
+    if (formData.phone) message += `Phone: ${formData.phone}\n`;
+    message += `\nMessage: ${formData.message}`;
     
     // Show success toast
     toast({
       title: "Inquiry Received",
-      description: "Thank you for contacting LuxeChef Consultancy. We will be in touch shortly.",
+      description: "Redirecting you to WhatsApp to complete your inquiry.",
     });
+    
+    // Open WhatsApp with the message
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
     
     // Reset form
     setFormData({
@@ -178,7 +187,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-gold-light hover:bg-gold-DEFAULT text-chef-dark font-semibold">
+              <Button type="submit" className="w-full bg-chef-dark hover:bg-chef-darker text-gold-light font-semibold border border-gold-light">
                 Submit Inquiry <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>

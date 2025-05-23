@@ -8,6 +8,10 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  
+  const phoneNumber = "+6282273507458";
+  const message = "Hello, I'd like to discuss your chef consultancy services";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,8 +57,11 @@ const Navbar = () => {
           <Link to="/cv" className="text-white hover:text-gold-light transition-colors">CV</Link>
           <Link to="/fee" className="text-white hover:text-gold-light transition-colors">Fee</Link>
           <Link to="/contact" className="text-white hover:text-gold-light transition-colors">Contact</Link>
-          <Button asChild variant="outline" className="border-gold-light text-gold-light hover:bg-gold-light/20 hover:text-gold-light">
-            <Link to="/contact">Get Started</Link>
+          <Button 
+            asChild 
+            variant="outline" 
+            className="border-gold-light text-gold-light hover:bg-gold-light/20 hover:text-gold-light">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Get Started</a>
           </Button>
         </div>
 
@@ -88,7 +95,7 @@ const Navbar = () => {
               variant="outline" 
               className="border-gold-light text-gold-light hover:bg-gold-light/20 w-full"
             >
-              <Link to="/contact">Get Started</Link>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Get Started</a>
             </Button>
           </div>
         </div>

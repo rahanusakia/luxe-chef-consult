@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import FloatingWhatsApp from "./FloatingWhatsApp";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ const PageLayout = ({ children, className = "" }: PageLayoutProps) => {
       <Navbar />
       {children}
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
