@@ -1,3 +1,4 @@
+
 import PageHeader from "@/components/PageHeader";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
@@ -257,38 +258,38 @@ const CurriculumVitae = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
                             <span className="text-white">Team Leadership</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
                             <span className="text-white">Cost Control</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
                             <span className="text-white">Inventory Management</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
                             <span className="text-white">Food Safety & HACCP</span>
                           </div>
                         </div>
                         
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
                             <span className="text-white">Menu Engineering</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
                             <span className="text-white">Supplier Negotiations</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
                             <span className="text-white">Restaurant Consulting</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-DEFAULT" fill="currentColor" />
+                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
                             <span className="text-white">Culinary Innovation</span>
                           </div>
                         </div>
@@ -305,7 +306,7 @@ const CurriculumVitae = () => {
                       <div className="space-y-6">
                         <div className="flex gap-4">
                           <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                            <Award className="h-6 w-6 text-gold-DEFAULT" />
+                            <Award className="h-6 w-6 text-gold-light" />
                           </div>
                           <div>
                             <h4 className="text-lg font-semibold text-white">Best Chef of the Year</h4>
@@ -318,7 +319,7 @@ const CurriculumVitae = () => {
                         
                         <div className="flex gap-4">
                           <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                            <Award className="h-6 w-6 text-gold-DEFAULT" />
+                            <Award className="h-6 w-6 text-gold-light" />
                           </div>
                           <div>
                             <h4 className="text-lg font-semibold text-white">Michelin Star Maintenance</h4>
@@ -331,7 +332,7 @@ const CurriculumVitae = () => {
                         
                         <div className="flex gap-4">
                           <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                            <Award className="h-6 w-6 text-gold-DEFAULT" />
+                            <Award className="h-6 w-6 text-gold-light" />
                           </div>
                           <div>
                             <h4 className="text-lg font-semibold text-white">Culinary Innovation Award</h4>
@@ -344,7 +345,7 @@ const CurriculumVitae = () => {
                         
                         <div className="flex gap-4">
                           <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                            <Award className="h-6 w-6 text-gold-DEFAULT" />
+                            <Award className="h-6 w-6 text-gold-light" />
                           </div>
                           <div>
                             <h4 className="text-lg font-semibold text-white">Excellence in Mentorship</h4>

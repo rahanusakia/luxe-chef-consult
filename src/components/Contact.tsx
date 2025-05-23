@@ -63,8 +63,8 @@ const Contact = () => {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-5 w-5 text-gold-light" strokeWidth={1.5} />
+                <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/40 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-5 w-5 text-gold-light" strokeWidth={2} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Our Location</h4>
@@ -74,8 +74,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-5 w-5 text-gold-light" strokeWidth={1.5} />
+                <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/40 flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-5 w-5 text-gold-light" strokeWidth={2} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Phone & WhatsApp</h4>
@@ -84,8 +84,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-5 w-5 text-gold-light" strokeWidth={1.5} />
+                <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/40 flex items-center justify-center flex-shrink-0">
+                  <Mail className="h-5 w-5 text-gold-light" strokeWidth={2} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Email</h4>
@@ -94,8 +94,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                  <Clock className="h-5 w-5 text-gold-light" strokeWidth={1.5} />
+                <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/40 flex items-center justify-center flex-shrink-0">
+                  <Clock className="h-5 w-5 text-gold-light" strokeWidth={2} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Business Hours</h4>

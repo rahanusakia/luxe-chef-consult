@@ -14,7 +14,7 @@ const ConsultantFee = () => {
         backgroundImage="/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Consultant Fee", href: "/consultant-fee", isCurrent: true }
+          { label: "Fee", href: "/fee", isCurrent: true }
         ]}
       />
       

@@ -51,7 +51,7 @@ const Navbar = () => {
             <Link to="/" className="text-white hover:text-gold-light transition-colors">Home</Link>
           )}
           <Link to="/cv" className="text-white hover:text-gold-light transition-colors">CV</Link>
-          <Link to="/consultant-fee" className="text-white hover:text-gold-light transition-colors">Fee</Link>
+          <Link to="/fee" className="text-white hover:text-gold-light transition-colors">Fee</Link>
           <Link to="/contact" className="text-white hover:text-gold-light transition-colors">Contact</Link>
           <Button asChild variant="outline" className="border-gold-light text-gold-light hover:bg-gold-light/20 hover:text-gold-light">
             <Link to="/contact">Get Started</Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
               <Link to="/" className="py-2 hover:text-gold-light transition-colors">Home</Link>
             )}
             <Link to="/cv" className="py-2 hover:text-gold-light transition-colors">CV</Link>
-            <Link to="/consultant-fee" className="py-2 hover:text-gold-light transition-colors">Fee</Link>
+            <Link to="/fee" className="py-2 hover:text-gold-light transition-colors">Fee</Link>
             <Link to="/contact" className="py-2 hover:text-gold-light transition-colors">Contact</Link>
             <Button 
               asChild 
