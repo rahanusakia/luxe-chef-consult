@@ -1,11 +1,7 @@
-
 import { ChefHat } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-chef-darker text-white py-12">
+  return <footer className="bg-chef-darker text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
@@ -38,12 +34,8 @@ const Footer = () => {
               Join our newsletter to receive updates on culinary trends, events, and exclusive insights.
             </p>
             <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="px-4 py-2 bg-chef-dark border border-gold-dark/30 text-white rounded-l outline-none focus:border-gold-light flex-grow"
-              />
-              <button className="bg-gold-DEFAULT hover:bg-gold-dark text-chef-dark px-4 py-2 rounded-r font-medium transition-colors">
+              <input type="email" placeholder="Your email address" className="px-4 py-2 bg-chef-dark border border-gold-dark/30 text-white rounded-l outline-none focus:border-gold-light flex-grow" />
+              <button className="bg-gold-DEFAULT hover:bg-zinc-700 text-slate-900 px-4 py-2 rounded-r font-medium transition-colors">
                 Subscribe
               </button>
             </div>
@@ -54,8 +46,6 @@ const Footer = () => {
           <p>Designed with excellence for culinary professionals worldwide</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
