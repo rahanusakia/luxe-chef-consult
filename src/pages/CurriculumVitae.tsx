@@ -294,7 +294,7 @@ const CurriculumVitae = () => {
                             <span className="text-white">Restaurant Consulting</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
+                            <Star fill="currentColor" className="h-4 w-4 text-zinc-600" />
                             <span className="text-white">Culinary Innovation</span>
                           </div>
                         </div>
