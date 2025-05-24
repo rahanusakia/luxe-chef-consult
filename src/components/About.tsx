@@ -1,5 +1,5 @@
 
-import { Award, Star, Crown } from 'lucide-react';
+import { Award, Star, Crown, Clock, MapPin, GraduationCap } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const About = () => {
@@ -17,14 +17,47 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1 relative">
             <div className="aspect-square rounded-full overflow-hidden border-8 border-gold-light/30 shadow-lg max-w-md mx-auto">
-              <img 
-                src="/chef-consulting.jpg" 
-                alt="Chef consulting with restaurant team" 
-                className="object-cover w-full h-full"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://source.unsplash.com/9aOswReDKPo';
-                }}
-              />
+              <div className="h-full w-full bg-gradient-to-br from-gold-light/20 to-gold-DEFAULT/30 p-6 flex flex-col justify-center">
+                <h3 className="text-xl md:text-2xl font-playfair text-chef-dark font-bold text-center mb-4 gold-underline">Culinary Journey</h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-5 w-5 text-gold-dark" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-chef-dark">30+ Years of Excellence</h4>
+                      <p className="text-sm text-chef-dark/70">Crafting culinary innovations since 1993</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-5 w-5 text-gold-dark" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-chef-dark">Global Experience</h4>
+                      <p className="text-sm text-chef-dark/70">Projects across 4 continents & 27 countries</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
+                      <GraduationCap className="h-5 w-5 text-gold-dark" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-chef-dark">Master Training</h4>
+                      <p className="text-sm text-chef-dark/70">Mentored over 200 Michelin-level chefs</p>
+                    </div>
+                  </div>
+
+                  <div className="text-center mt-4">
+                    <span className="inline-block px-4 py-2 bg-gold-DEFAULT/20 rounded-full text-gold-dark text-sm font-semibold">
+                      Elevating Culinary Arts Since 1993
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
