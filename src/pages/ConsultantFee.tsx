@@ -32,7 +32,7 @@ const ConsultantFee = () => {
                   <p className="text-lg font-semibold text-gold-light">Rp 20.000.000</p>
                 </div>
                 <div className="flex flex-col items-center p-6 bg-chef-dark rounded-lg border border-gold-dark/10">
-                  <CalendarDays className="h-10 w-10 text-gold-light mb-4" strokeWidth={1.5} />
+                  <CalendarDays strokeWidth={1.5} className="h-10 w-10 text-zinc-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-white">Duration</h3>
                   <p className="text-lg font-semibold text-white">12 Days</p>
                   <p className="text-sm text-gray-400">(Sunday Off)</p>
