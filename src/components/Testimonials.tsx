@@ -25,6 +25,55 @@ const Testimonials = () => {
       image: "/testimonial3.jpg",
       fallbackImage: "https://source.unsplash.com/iFgRcqHznqg"
     },
+    {
+      quote: "David's expertise in fine dining operations helped us streamline our kitchen processes while maintaining exceptional quality standards.",
+      name: "Marcus Johnson",
+      role: "CEO, Sapphire Hospitality Group",
+      image: "/testimonial4.jpg",
+      fallbackImage: "https://source.unsplash.com/IF9TK5Uy-KI"
+    },
+    {
+      quote: "We've seen a 35% increase in repeat customers since implementing LuxeChef's service excellence program. Their impact has been tremendous.",
+      name: "Elena Vasquez",
+      role: "General Manager, Coastal Brasserie",
+      image: "/testimonial5.jpg",
+      fallbackImage: "https://source.unsplash.com/7YVZYZeITc8"
+    },
+    {
+      quote: "The menu development process was collaborative and resulted in signature dishes that perfectly reflect our brand's identity.",
+      name: "Thomas Wright",
+      role: "Owner, Ember Grill & Wine Bar",
+      image: "/testimonial6.jpg", 
+      fallbackImage: "https://source.unsplash.com/sibVwORYqs0"
+    },
+    {
+      quote: "LuxeChef's expertise in wine pairing and sommelier training elevated our beverage program to match our culinary excellence.",
+      name: "Olivia Chang",
+      role: "F&B Director, The Metropolitan Hotel",
+      image: "/testimonial7.jpg",
+      fallbackImage: "https://source.unsplash.com/iFgRcqHznqg"
+    },
+    {
+      quote: "Working with Chef David was transformative. His insights into modern gastronomy helped us stay ahead of dining trends while honoring our heritage.",
+      name: "Richard Patel",
+      role: "Executive Chef, Heritage Restaurant",
+      image: "/testimonial8.jpg",
+      fallbackImage: "https://source.unsplash.com/IF9TK5Uy-KI"
+    },
+    {
+      quote: "The operational assessment provided clear, actionable recommendations that reduced our food waste by 25% and improved kitchen workflow dramatically.",
+      name: "Charlotte Dubois",
+      role: "Operations Director, Le Petit Château",
+      image: "/testimonial9.jpg",
+      fallbackImage: "https://source.unsplash.com/7YVZYZeITc8"
+    },
+    {
+      quote: "LuxeChef's staff training program not only improved our service standards but also boosted team morale and reduced turnover by 30%.",
+      name: "Alexander Kim",
+      role: "HR Director, Fusion Hospitality Group",
+      image: "/testimonial10.jpg",
+      fallbackImage: "https://source.unsplash.com/sibVwORYqs0"
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,14 +130,14 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <div className="flex justify-center mt-10 gap-3">
+          <div className="flex justify-center mt-10 gap-2 flex-wrap">
             {testimonials.map((_, index) => (
               <button 
                 key={index} 
                 onClick={() => setCurrentIndex(index)}
-                className={`h-3 w-3 rounded-full transition-all ${
-                  index === currentIndex ? 'bg-gold-DEFAULT w-6' : 'bg-gold-DEFAULT/30'
-                }`}
+                className={`h-2.5 transition-all ${
+                  index === currentIndex ? 'bg-gold-DEFAULT w-6' : 'bg-gold-DEFAULT/30 w-2.5'
+                } rounded-full`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
