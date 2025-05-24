@@ -1,5 +1,5 @@
 
-import { ChefHat, Check } from "lucide-react";
+import { ChefHat } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Skills = () => {
@@ -11,7 +11,7 @@ const Skills = () => {
   ];
   
   return (
-    <section className="py-24 bg-chef-darker/80 relative" id="skills">
+    <section className="py-24 bg-chef-darker/90 relative" id="skills">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center mb-16">
           <div className="h-16 w-16 rounded-full bg-gold-DEFAULT/40 flex items-center justify-center mb-4">
@@ -23,21 +23,21 @@ const Skills = () => {
           <div className="w-24 h-1 bg-gold-DEFAULT rounded-full"></div>
         </div>
         
-        <Card className="bg-chef-dark/70 border border-gold-DEFAULT/30 shadow-xl backdrop-blur-md max-w-4xl mx-auto">
+        <Card className="bg-transparent border-0 shadow-none backdrop-blur-none max-w-4xl mx-auto">
           <CardContent className="p-8 md:p-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {skills.map((skill, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-4 fade-in-up bg-chef-darker/40 p-5 rounded-lg border border-gold-DEFAULT/20"
+                  className="flex items-start gap-4 fade-in-up bg-transparent"
                   style={{
                     animationDelay: `${index * 0.15}s`
                   }}
                 >
-                  <div className="h-10 w-10 rounded-full bg-gold-DEFAULT/30 border border-gold-DEFAULT/60 flex-shrink-0 flex items-center justify-center">
-                    <span className="text-gold-light font-bold text-lg">{index + 1}</span>
+                  <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/40 flex-shrink-0 flex items-center justify-center">
+                    <span className="text-gold-light font-bold text-xl">{index + 1}</span>
                   </div>
-                  <p className="text-white text-lg font-medium">{skill}</p>
+                  <p className="text-white text-lg md:text-xl font-medium pt-2">{skill}</p>
                 </div>
               ))}
             </div>
@@ -50,7 +50,7 @@ const Skills = () => {
         style={{
           backgroundImage: 'url("/lovable-uploads/6fa56379-4b02-4aca-92d4-3c1bdceec894.png")'
         }} 
-        className="absolute inset-0 bg-cover bg-center opacity-10 z-0"
+        className="absolute inset-0 bg-cover bg-center opacity-20 z-0"
       />
     </section>
   );
