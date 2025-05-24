@@ -59,7 +59,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           
-          <p className="text-white/70 max-w-3xl mx-auto mt-8">
+          <p className="text-white/70 max-w-3xl mx-auto mt-8 my-0">
             Ready to elevate your culinary business? Our consultants are available for an initial 
             discussion about your specific needs and objectives.
           </p>
