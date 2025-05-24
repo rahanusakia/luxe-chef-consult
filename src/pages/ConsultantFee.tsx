@@ -1,22 +1,19 @@
-
 import { Check, CreditCard, DollarSign, CalendarDays, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Link } from "react-router-dom";
 import PageHeader from "@/components/PageHeader";
 import PageLayout from "@/components/PageLayout";
-
 const ConsultantFee = () => {
-  return (
-    <PageLayout>
-      <PageHeader
-        title="Consultant Fee"
-        backgroundImage="/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Fee", href: "/fee", isCurrent: true }
-        ]}
-      />
+  return <PageLayout>
+      <PageHeader title="Consultant Fee" backgroundImage="/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png" breadcrumbs={[{
+      label: "Home",
+      href: "/"
+    }, {
+      label: "Fee",
+      href: "/fee",
+      isCurrent: true
+    }]} />
       
       <section className="py-20 container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
@@ -30,7 +27,7 @@ const ConsultantFee = () => {
             <CardContent className="p-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex flex-col items-center p-6 bg-chef-dark rounded-lg border border-gold-dark/10">
-                  <DollarSign className="h-10 w-10 text-gold-light mb-4" strokeWidth={1.5} />
+                  <DollarSign strokeWidth={1.5} className="h-10 w-10 text-zinc-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-white">Fee</h3>
                   <p className="text-lg font-semibold text-gold-light">Rp 20.000.000</p>
                 </div>
@@ -135,8 +132,6 @@ const ConsultantFee = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default ConsultantFee;
