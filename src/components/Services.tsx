@@ -6,7 +6,7 @@ const Services = () => {
     title: "Menu Development & Innovation",
     description: "Craft distinctive, profitable menus that balance creativity with market demands and operational capabilities. We analyze food costs, ingredient availability, and culinary trends."
   }, {
-    icon: <Award className="h-10 w-10 text-gold-light" />,
+    icon: <Award className="h-10 w-10 text-zinc-600" />,
     title: "Culinary Team Training",
     description: "Elevate your kitchen team's skills with personalized training programs focusing on technique refinement, consistency, efficiency, and modern culinary approaches."
   }, {
