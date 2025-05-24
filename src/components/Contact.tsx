@@ -118,7 +118,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6 bg-chef-dark p-8 rounded-lg shadow-md border border-gold-DEFAULT/10">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-chef-dark p-8 rounded-lg shadow-md">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
