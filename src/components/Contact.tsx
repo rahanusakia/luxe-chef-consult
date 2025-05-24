@@ -58,7 +58,7 @@ const Contact = () => {
   return <section id="contact" className="bg-chef-darker py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 gold-underline">Contact Us</h2>
+          
           <p className="text-white/70 max-w-3xl mx-auto mt-8">
             Ready to elevate your culinary business? Our consultants are available for an initial 
             discussion about your specific needs and objectives.
