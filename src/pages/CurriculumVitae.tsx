@@ -263,7 +263,7 @@ const CurriculumVitae = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
-                            <Star className="h-4 w-4 text-gold-light" fill="currentColor" />
+                            <Star fill="currentColor" className="h-4 w-4 text-zinc-600" />
                             <span className="text-white">Team Leadership</span>
                           </div>
                           <div className="flex items-center gap-2">
