@@ -14,7 +14,7 @@ const Services = () => {
     title: "Operational Excellence",
     description: "Optimize your kitchen workflow, inventory management, and quality control systems to ensure seamless service, reduce waste, and increase profitability."
   }, {
-    icon: <Calendar className="h-10 w-10 text-gold-light" />,
+    icon: <Calendar className="h-10 w-10 text-zinc-600" />,
     title: "Strategic Culinary Planning",
     description: "Develop long-term culinary strategies aligned with your brand vision, market positioning, and business objectives for sustainable growth and reputation building."
   }];
