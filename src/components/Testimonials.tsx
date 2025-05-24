@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Testimonials = () => {
   const testimonials = [
@@ -8,71 +9,81 @@ const Testimonials = () => {
       quote: "LuxeChef Consultancy transformed our restaurant's menu and operations. Our guest satisfaction scores increased by 40% and food costs decreased significantly.",
       name: "Isabella Martinez",
       role: "Owner, Maison Lumière Restaurant",
-      image: "/testimonial1.jpg",
-      fallbackImage: "https://source.unsplash.com/7YVZYZeITc8"
+      image: "/lovable-uploads/447d23ff-3be3-4464-b6ff-811dd4f764d6.png",
+      fallbackImage: "https://source.unsplash.com/7YVZYZeITc8",
+      initials: "IM"
     },
     {
       quote: "The culinary team training provided by LuxeChef was exceptional. Our chefs now work with greater precision, creativity, and efficiency than ever before.",
       name: "James Robertson",
       role: "Executive Director, The Grand Hotel",
-      image: "/testimonial2.jpg",
-      fallbackImage: "https://source.unsplash.com/sibVwORYqs0"
+      image: "/lovable-uploads/935ed434-3364-4040-88ec-79d34f722add.png",
+      fallbackImage: "https://source.unsplash.com/sibVwORYqs0",
+      initials: "JR"
     },
     {
       quote: "Their strategic guidance helped us secure our first Michelin star within 18 months of opening. The ROI on their consultancy has been extraordinary.",
       name: "Sophie Chen",
       role: "Founder, Azure Fine Dining",
-      image: "/testimonial3.jpg",
-      fallbackImage: "https://source.unsplash.com/iFgRcqHznqg"
+      image: "/lovable-uploads/9a801591-fe5f-4493-91f3-a790dfc59885.png",
+      fallbackImage: "https://source.unsplash.com/iFgRcqHznqg",
+      initials: "SC"
     },
     {
       quote: "David's expertise in fine dining operations helped us streamline our kitchen processes while maintaining exceptional quality standards.",
       name: "Marcus Johnson",
       role: "CEO, Sapphire Hospitality Group",
-      image: "/testimonial4.jpg",
-      fallbackImage: "https://source.unsplash.com/IF9TK5Uy-KI"
+      image: "/lovable-uploads/6fa56379-4b02-4aca-92d4-3c1bdceec894.png",
+      fallbackImage: "https://source.unsplash.com/IF9TK5Uy-KI",
+      initials: "MJ"
     },
     {
       quote: "We've seen a 35% increase in repeat customers since implementing LuxeChef's service excellence program. Their impact has been tremendous.",
       name: "Elena Vasquez",
       role: "General Manager, Coastal Brasserie",
-      image: "/testimonial5.jpg",
-      fallbackImage: "https://source.unsplash.com/7YVZYZeITc8"
+      image: "/lovable-uploads/88a796a9-6939-418d-9e79-edb6e2df8edc.png",
+      fallbackImage: "https://source.unsplash.com/7YVZYZeITc8",
+      initials: "EV"
     },
     {
       quote: "The menu development process was collaborative and resulted in signature dishes that perfectly reflect our brand's identity.",
       name: "Thomas Wright",
       role: "Owner, Ember Grill & Wine Bar",
-      image: "/testimonial6.jpg", 
-      fallbackImage: "https://source.unsplash.com/sibVwORYqs0"
+      image: "/lovable-uploads/b756b57d-9265-4f42-8c36-eb308c72a6d1.png", 
+      fallbackImage: "https://source.unsplash.com/sibVwORYqs0",
+      initials: "TW"
     },
     {
       quote: "LuxeChef's expertise in wine pairing and sommelier training elevated our beverage program to match our culinary excellence.",
       name: "Olivia Chang",
       role: "F&B Director, The Metropolitan Hotel",
-      image: "/testimonial7.jpg",
-      fallbackImage: "https://source.unsplash.com/iFgRcqHznqg"
+      image: "/lovable-uploads/c3a7ed92-9ceb-474f-9233-19a8089f5ede.png",
+      fallbackImage: "https://source.unsplash.com/iFgRcqHznqg",
+      initials: "OC"
     },
     {
       quote: "Working with Chef David was transformative. His insights into modern gastronomy helped us stay ahead of dining trends while honoring our heritage.",
       name: "Richard Patel",
       role: "Executive Chef, Heritage Restaurant",
-      image: "/testimonial8.jpg",
-      fallbackImage: "https://source.unsplash.com/IF9TK5Uy-KI"
+      image: "/lovable-uploads/c244efb4-5e35-41c7-9516-0edfc42dc521.png",
+      fallbackImage: "https://source.unsplash.com/IF9TK5Uy-KI",
+      initials: "RP"
     },
     {
       quote: "The operational assessment provided clear, actionable recommendations that reduced our food waste by 25% and improved kitchen workflow dramatically.",
       name: "Charlotte Dubois",
       role: "Operations Director, Le Petit Château",
-      image: "/testimonial9.jpg",
-      fallbackImage: "https://source.unsplash.com/7YVZYZeITc8"
+      image: "/lovable-uploads/a3c21c55-3279-4304-a2fd-cf0eabe212e3.png",
+      fallbackImage: "https://source.unsplash.com/7YVZYZeITc8",
+      initials: "CD"
     },
     {
       quote: "LuxeChef's staff training program not only improved our service standards but also boosted team morale and reduced turnover by 30%.",
       name: "Alexander Kim",
       role: "HR Director, Fusion Hospitality Group",
-      image: "/testimonial10.jpg",
-      fallbackImage: "https://source.unsplash.com/sibVwORYqs0"
+      image: "/lovable-uploads/a3c21c55-3279-4304-a2fd-cf0eabe212e3.png",
+      fallbackImage: "https://source.unsplash.com/sibVwORYqs0",
+      initials: "AK"
     },
   ];
 
@@ -112,16 +123,18 @@ const Testimonials = () => {
               </p>
               
               <div className="flex items-center gap-4">
-                <div className="h-14 w-14 rounded-full overflow-hidden">
-                  <img 
+                <Avatar className="h-14 w-14 border-2 border-gold-DEFAULT/30">
+                  <AvatarImage 
                     src={currentTestimonial.image} 
-                    alt={currentTestimonial.name} 
-                    className="h-full w-full object-cover"
+                    alt={currentTestimonial.name}
                     onError={(e) => {
                       e.currentTarget.src = currentTestimonial.fallbackImage;
                     }}
                   />
-                </div>
+                  <AvatarFallback className="bg-gold-light/20 text-gold-DEFAULT">
+                    {currentTestimonial.initials}
+                  </AvatarFallback>
+                </Avatar>
                 <div>
                   <h4 className="font-semibold text-gold-light">{currentTestimonial.name}</h4>
                   <p className="text-sm text-white/70">{currentTestimonial.role}</p>

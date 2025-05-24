@@ -15,8 +15,8 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden h-full w-full">
+          <div className="order-2 lg:order-1 relative">
+            <div className="aspect-square rounded-full overflow-hidden border-8 border-gold-light/30 shadow-lg max-w-md mx-auto">
               <img 
                 src="/chef-consulting.jpg" 
                 alt="Chef consulting with restaurant team" 
