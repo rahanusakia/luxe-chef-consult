@@ -10,7 +10,7 @@ const Services = () => {
     title: "Culinary Team Training",
     description: "Elevate your kitchen team's skills with personalized training programs focusing on technique refinement, consistency, efficiency, and modern culinary approaches."
   }, {
-    icon: <Briefcase className="h-10 w-10 text-gold-light" />,
+    icon: <Briefcase className="h-10 w-10 text-zinc-600" />,
     title: "Operational Excellence",
     description: "Optimize your kitchen workflow, inventory management, and quality control systems to ensure seamless service, reduce waste, and increase profitability."
   }, {
