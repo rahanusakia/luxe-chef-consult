@@ -350,7 +350,7 @@ const CurriculumVitae = () => {
                         
                         <div className="flex gap-4">
                           <div className="h-12 w-12 rounded-full bg-gold-DEFAULT/20 flex items-center justify-center flex-shrink-0">
-                            <Award className="h-6 w-6 text-gold-light" />
+                            <Award className="h-6 w-6 text-zinc-600" />
                           </div>
                           <div>
                             <h4 className="text-lg font-semibold text-white">Excellence in Mentorship</h4>
