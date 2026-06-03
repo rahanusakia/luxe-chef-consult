@@ -1,70 +1,73 @@
-# Welcome to your Lovable project
+# 🍽️ Luxe Chef Consult
 
-## Project info
+**AI-powered private chef consultation platform built with GPT-4o**
 
-**URL**: https://lovable.dev/projects/def087b9-3aa9-49e4-96f8-a744916629ea
+> Live demo: [konsultanchef.com](https://konsultanchef.com)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## What It Does
 
-**Use Lovable**
+Luxe Chef Consult connects clients with elite private chefs — and at the heart of the experience is **Chef Lumière**, an AI culinary consultant powered by **OpenAI GPT-4o**.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/def087b9-3aa9-49e4-96f8-a744916629ea) and start prompting.
+Users can:
+- 🧑‍🍳 **Chat with Chef Lumière** for personalized culinary advice in real-time
+- 🍽️ **Design custom multi-course menus** tailored to their event, guests, and dietary needs
+- 🥂 **Get expert wine & ingredient pairings** for specific dishes
+- 🌿 **Request luxury plant-based menus** that don't compromise on elegance
+- 📅 **Get guided through booking a private chef** for any occasion
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## AI Integration
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Detail | Value |
+|--------|-------|
+| **Model** | `gpt-4o` |
+| **API** | OpenAI Chat Completions API |
+| **Persona** | Chef Lumière — a Michelin-star AI culinary consultant |
+| **Context** | System-prompted with 20+ years of fine dining expertise |
+| **Interface** | Real-time streaming chat with typing indicator |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The AI is not a feature add-on — it is the **core value proposition**. Every interaction with the platform is mediated through GPT-4o, turning what would be a static booking page into a personalized culinary conversation.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Frontend:** React 18, TypeScript, Vite
+- **UI Components:** shadcn/ui, Tailwind CSS
+- **AI:** OpenAI GPT-4o (Chat Completions API)
+- **Hosting:** Custom domain via Vercel
+- **Built with:** Lovable AI
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Quick Start
+
+```bash
+git clone https://github.com/rahanusakia/luxe-chef-consult
+cd luxe-chef-consult
+npm install
+```
+
+Create `.env`:
+```
+VITE_OPENAI_API_KEY=sk-...
+```
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Screenshots
 
-**Use GitHub Codespaces**
+> Bespoke menu design, wine pairing advice, and private chef booking — all through natural conversation with Chef Lumière.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## License
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT
