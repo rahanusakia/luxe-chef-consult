@@ -204,11 +204,6 @@ async function callOpenAI(messages: Message[]): Promise<string> {
 3. Add environment variable: `VITE_OPENAI_API_KEY`
 4. Deploy → live in ~2 minutes
 
-### Lovable
-
-1. Open [Lovable Project](https://lovable.dev/projects/def087b9-3aa9-49e4-96f8-a744916629ea)
-2. Add `VITE_OPENAI_API_KEY` in project settings
-3. Click Publish
 
 ---
 
